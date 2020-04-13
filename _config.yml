@@ -24,10 +24,11 @@ github_username: ceciliassis
 minimal_mistakes_skin: default
 search: true
 repository: ceciliassis/ceciliassis.github.io
+url: https://ceciliassis.com
 
 # Build settings
 markdown: kramdown
-remote_theme: mmistakes/minimal-mistakes
+remote_theme: mmistakes/minimal-mistakes@4.19.1
 # Outputting
 permalink: /:categories/:title/
 paginate: 10 # amount of posts to show
@@ -61,7 +62,7 @@ plugins:
 author:
   name   : "Cecília Assis"
   avatar : "/assets/images/bio-photo.png"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "I love coding, it's my life and my main goal is to do it the best way possible! Join me on my quest!"
   links:
     - label: "Website"
       icon: "fas fa-fw fa-link"
@@ -88,6 +89,8 @@ footer:
       icon: "fab fa-fw fa-instagram"
       url: "https://instagram.com/aceciliassis"
 
+
+
 defaults:
   # _posts
   - scope:
@@ -107,6 +110,11 @@ defaults:
     values:
       layout: single
       author_profile: true
+      
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "ceciliassis"
 
 category_archive:
   type: liquid
