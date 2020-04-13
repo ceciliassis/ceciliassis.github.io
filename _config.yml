@@ -122,3 +122,9 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+analytics:
+  provider: 'google-gtag'
+  google:
+    tracking_id: 'G-1P0HRYT5ZL'
+    anonymize_ip: false # default
