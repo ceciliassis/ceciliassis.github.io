@@ -1,0 +1,88 @@
+---
+layout: post
+title: 'Classes 101: Class.new'
+date: 2017-04-04 23:55:58.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- class
+- classe
+- coding
+- girl
+- initialize
+- me
+- new
+- objetos
+- programming
+meta:
+  _wpcom_is_markdown: '1'
+  _thumbnail_id: '1804'
+  _rest_api_published: '1'
+  _publicize_done_16115497: '1'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154983946068280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/849410285056249856";}}
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '3641526236'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6255175978725761024&type=U&a=NqXH
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/04/04/classes-101-class-new/"
+excerpt: Hoje vamos estudar como definir classes no Ruby e como tudo em Ruby é um
+  objeto, já não será sem tempo que aprendêssemos como definir os nossos!
+---
+<h4 style="text-align:right;">Read the English version, <a href="https://merubygirl.wordpress.com/2017/04/09/english-version-classes-101-class-new/" target="_blank">here</a>.</h4>
+<p style="text-align:center;"><b><i>Hey, como vai?!</i></b></p>
+<p>Hoje vamos estudar como definir classes no Ruby e como tudo em Ruby é um objeto, já não será sem tempo que aprendêssemos como definir os nossos:</p>
+<p>[code lang=ruby]<br />
+class Livro<br />
+end<br />
+[/code]</p>
+<p>Toda vez que criamos uma classe é bom que criemos também o método <span style="color:#ff6600;"><code>initialize</code></span>, chamado sempre que uma nova instância de nossa classe é criada, o famoso <strong>construtor</strong>.</p>
+<p>[code lang=ruby]<br />
+class Livro<br />
+  def initialize<br />
+  end<br />
+end<br />
+[/code]</p>
+<p>O Ruby não suporta sobrecarga de métodos em classes, e somente o último estabelecido é considerado. Como uma alternativa, usamos argumentos com valores padrão, uma dica é usá-los no final da listagem de argumentos, porque o Ruby tem um comportamento estranho caso contrário, veja <a href="https://github.com/ceciliassis/ruby-style-guide#optional-arguments">aqui</a>:</p>
+<p>[code lang=ruby]<br />
+class Livro<br />
+  def initialize(autor, nome, isbn = &#039;1&#039;)<br />
+   puts &quot;Autor: #{autor}, nome: #{nome}, ISBN: #{isbn}&quot;<br />
+  end<br />
+end<br />
+[/code]</p>
+<p>Dessa forma, se instanciarmos um objeto sem o valor do ISBN, tudo estará bem:</p>
+<p>[code lang=ruby]<br />
+class Livro<br />
+  def initialize(autor, nome, isbn = &#039;1&#039;)<br />
+   puts &quot;Autor: #{autor}, nome: #{nome}, ISBN: #{isbn}&quot;<br />
+  end<br />
+end</p>
+<p>livro1 = Livro.new &#039;Cecilia Assis&#039;, &#039;Ruby 101&#039;<br />
+livro2 = Livro.new &#039;Julia Tolezano&#039;, &#039;Ta todo mundo mal&#039;, &#039;12345&#039;<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>
+  Autor: Cecilia Assis, nome: Ruby 101, ISBN: 1<br />
+  Autor: Julia Tolezano, nome: Ta todo mundo mal, ISBN: 12345
+</p></blockquote>
+<p>Bem, com o exemplo acima já sabemos como declarar um objeto, certo? <strong>[nomeDaClasse].new</strong> . O texto acima é projetado, pois foi o que definimos para o método <span style="color:#ff6600;"><code>initialize</code></span>.</p>
+<p><strong>Mas e se quisermos outros métodos em nossa classe? Tem alguma ideia? Deixe ela nos comentários!</strong></p>
+<p>Nos vemos no próximo post ...</p>
+<p style="text-align:right;"><b><i>... Até mais!!</i></b></p>
+<p><img src="{{ site.baseurl }}/assets/classe101new.png" alt="classe101new" width="735" height="550" class="alignnone size-full wp-image-1804" /></p>

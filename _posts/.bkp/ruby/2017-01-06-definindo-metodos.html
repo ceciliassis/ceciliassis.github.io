@@ -1,0 +1,148 @@
+---
+layout: post
+title: Definindo Métodos!
+date: 2017-01-06 15:00:32.000000000 -02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- default
+- função
+- function
+- method
+- metodo
+- padrão
+- parâmetro
+meta:
+  _wpcom_is_markdown: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '477916408'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154718284128280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/817445989887934464";}}
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  _thumbnail_id: '1676'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/01/06/definindo-metodos/"
+---
+<p><em><strong>Hey, como vai?!</strong></em></p>
+<p>Como sabemos, tudo em Ruby é um objeto, por isso métodos são declarados e não funções já que essas não incidem sobre um objeto.</p>
+<p>Para declararmos um método usamos:</p>
+<p>[code lang="ruby"]<br />
+def hello_world<br />
+  puts 'Bem vindo ao Ruby!'<br />
+end<br />
+[/code]</p>
+<p>A chamada do já declarado método é feita da seguinte forma:</p>
+<p>[code lang="ruby"]<br />
+hello_world<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>Bem vindo ao Ruby!</p></blockquote>
+<p>Com esse exemplo<em>, </em>talvez você pense: <em>Mas esse método não pertence a classe alguma.</em></p>
+<p>Porém lhe digo que sim, ele faz parte da classe Method. Para perceber isso é necessário algumas coisa mais avançadas, com o Ruby instalado em seu PC:</p>
+<ol>
+<li>Abra o terminal</li>
+<li>Digite <span style="color:#ff6600;"><code>irb</code></span></li>
+<li>Declare o método que quiser, com o nome que quiser</li>
+<li>Digite <span style="color:#ff6600;"><code>Method.instance_methods</code></span></li>
+</ol>
+<p>Pois bem, esse passos mostrarão um vetor contendo <em>junto a outros métodos</em>, o <strong>novo feito</strong>. Esses pertencem a classe Method e a ela somente já que são métodos de instância.</p>
+<p>Eu fiz tudo isso com o exemplo trazido, o resultado foi:</p>
+<p><img class="alignnone size-full wp-image-674" src="{{ site.baseurl }}/assets/screenshot-from-2017-01-02-16-55-18.png" alt="screenshot-from-2017-01-02-16-55-18" width="1352" height="93" /></p>
+<p style="text-align:center;">Então, como pôde ver, o método <span style="color:#ff6600;"><code>hello_world</code></span> está lá.</p>
+<p>Usei também um notação que traz somente os 26 primeiros elementos do array, assunto do post: Vetores e Vetores, parte 1.</p>
+<p>Uma forma mais simples seria digitar <span style="color:#ff6600;"><code>method(:hello_world)</code></span> no <strong><code>irb</code></strong>. Resultado:</p>
+<blockquote><p>#</p></blockquote>
+<p style="text-align:center;">Dizendo que o método <span style="color:#ff6600;"><code>hello_world</code></span> pertence a classe Object, mãe de todas as outras.</p>
+<p>É importante salientar que se digitarmos <span style="color:#ff6600;"><code>Object.instance_methods</code></span> no <strong><code>irb</code></strong>, o novo método declarado também aparecerá dentre os demais.</p>
+<p>O Ruby traz os métodos de uma classe enquanto Symbols (símbolos), um conceito amplamente usado na linguagem e que será abordado posteriormente.</p>
+<hr />
+<p>E é somente isso que precisamos para declaração e uso dos métodos. O código inteiro fica assim:</p>
+<p>[code lang="ruby"]<br />
+def hello_world<br />
+  puts 'Bem vindo ao Ruby!'<br />
+end</p>
+<p>hello_world<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Métodos parametrizados</strong></p>
+<p>Estamos muito acostumados a uma série de parâmetros em nossos métodos, no Ruby é assim:</p>
+<p>[code lang="ruby"]<br />
+def hello_world(frase)<br />
+  puts frase<br />
+end</p>
+<p>hello_world 'Bem vindo ao Ruby!'<br />
+# ou<br />
+hello_world('Bem vindo ao Ruby!')<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>Bem vindo ao Ruby!</p>
+<p>Bem vindo ao Ruby!</p></blockquote>
+<p>Como já dito, no Ruby podemos ou não usar parênteses na chamada de métodos parametrizados.  Também é bom saber que para separação dos parâmetros são usadas vírgulas (<span style="color:#ff6600;"><code>,</code></span>).</p>
+<hr />
+<p style="text-align:center;"><strong>Métodos com valores default (padrão)</strong></p>
+<p>Existe a opção de valores padrão para parâmetros:</p>
+<p>[code lang="ruby"]<br />
+def hello_world(frase = 'Bem vindo ao Ruby')<br />
+  puts frase<br />
+end</p>
+<p>hello_world<br />
+hello_world 'Ruby é muito legal!'<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>Bem vindo ao Ruby!</p>
+<p>Ruby é muito legal!</p></blockquote>
+<hr />
+<p style="text-align:center;"><strong>Métodos com retorno</strong></p>
+<p>Em Ruby a <strong>última</strong> linha do método é dada enquanto o seu retorno, porém o comando <span style="color:#ff6600;"><code>return</code></span> também pode ser usado.</p>
+<p>[code lang="ruby"]<br />
+def hello_world<br />
+  'Bem vindo ao Ruby'<br />
+end</p>
+<p>frase = hello_world<br />
+puts frase<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>Bem vindo ao Ruby</p></blockquote>
+<p>Usando a <em>keyword</em> <span style="color:#ff6600;"><code>return</code></span>, teríamos:</p>
+<p>[code lang="ruby"]<br />
+def hello_world<br />
+  return 'Bem vindo ao Ruby'<br />
+end</p>
+<p>frase = hello_world<br />
+puts frase<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>Bem vindo ao Ruby</p></blockquote>
+<p>O mesmo vale para condicionais dentro do método.</p>
+<p>[code lang="ruby"]<br />
+def hello_world(option)<br />
+  if(option == 1)<br />
+    'Bem vindo'<br />
+  else<br />
+    'Até mais'<br />
+  end<br />
+end</p>
+<p>puts hello_world 0<br />
+puts hello_world 1<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>Bem vindo ao Ruby</p>
+<p>Ate mais</p></blockquote>
+<hr />
+<p>Bem, com isso terminamos! Caso tenha alguma dúvida, não hesite em dizer.</p>
+<p style="text-align:right;"><em><strong>Até mais!</strong></em></p>
+<p><img src="{{ site.baseurl }}/assets/defmetodos.png" alt="defmetodos" width="735" height="550" class="alignnone size-full wp-image-1676" /></p>

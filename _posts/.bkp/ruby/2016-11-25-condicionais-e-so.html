@@ -1,0 +1,85 @@
+---
+layout: post
+title: Condicionais e só!
+date: 2016-11-25 05:39:33.000000000 -02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- condicionais
+- else if
+- if
+- if else
+meta:
+  _wpcom_is_markdown: '1'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154575197003280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/802023915941986304";}}
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '29282694419'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  _thumbnail_id: '1682'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2016/11/25/condicionais-e-so/"
+---
+<p><em><strong>Heey, como vai?!</strong></em></p>
+<p>Eu andei meio sumida, não é mesmo? Me desculpe por isso, a faculdade anda me tirando o sono... <em>Por isso este post 03:07 da madruga</em>.</p>
+<p>Pois bem! Hoje vim falar de condicionais, os famosos <strong>if</strong> e <strong>elses </strong>e como o Ruby os trata. Let's go!</p>
+<hr />
+<p style="text-align:center;"><strong>If</strong></p>
+<p>Bem, todo programador sabe que em algum momento uma decisão deverá ser tomada sua aplicação. <em>Se </em>algo acontecer o que eu faço? No Ruby:</p>
+<p>[code lang="ruby"]<br />
+if algumaCoisaAconteceu<br />
+  puts 'O que eu faço?' # haha, saida: O que eu faço?<br />
+end<br />
+[/code]</p>
+<p>Perceba que o Ruby requisita a keyword <span style="color:#ff6600;"><code>end</code></span> no final, para informar o fim do <span style="color:#ff6600;"><code>if</code></span>, lembrando as chaves <span style="color:#ff6600;"><code>{}</code></span>, utilizadas na <strong>Linguagem C</strong>, por exemplo.</p>
+<hr />
+<p style="text-align:center;"><strong>If Else</strong></p>
+<p style="text-align:left;">O <strong>se-senão</strong> no Ruby também pede o comando <span style="color:#ff6600;"><code>end</code></span> no final, mas somente para o <span style="color:#ff6600;"><code>else</code></span>.</p>
+<p>[code lang="ruby"]<br />
+if number &gt; 0<br />
+  puts 'Positivo' # saida: Positivo<br />
+else<br />
+  puts 'Negativo ou Zero' # saida: Negativo ou Zero<br />
+end<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>If Elsif Else</strong></p>
+<p>Como apresentado no título, aqui a linguagem mostra mais um diferencial. Enquanto C e Java, por exemplo usam a terminologia <span style="color:#ff6600;"><code>else if</code></span> o Ruby utiliza <span style="color:#ff6600;"><code>elsif</code></span>.</p>
+<p>[code lang="ruby"]<br />
+if number &gt; 0<br />
+  puts 'Positivo' # saida: Positivo<br />
+elsif number == 0<br />
+  puts 'Zero' # saida: Zero<br />
+else<br />
+  puts 'Negativo' # saida: Negativo<br />
+end<br />
+[/code]</p>
+<p>É possível perceber com os códigos já vistos e será nos próximos que o Ruby não pede parênteses <span style="color:#ff6600;"><code>()</code></span>, mas também não impede que eles sejam colocados, logo, cabe a você a decisão.</p>
+<p>[code lang="ruby"]<br />
+if (number &gt; 0)<br />
+  puts 'Positivo' # saida: Positivo<br />
+end</p>
+<p># igual</p>
+<p>if number &gt; 0<br />
+  puts 'Positivo' # saida: Positivo<br />
+end<br />
+[/code]</p>
+<hr />
+<p>Por ora terminamos o post de hoje. Espero que tenha gostado. Se ficou alguma dúvida, não hesite em me dizer!</p>
+<p><em>Todo conteúdo trazido aqui se encontra no <a href="https://github.com/ceciliassis/meRubyGirl/tree/master/rubyProgramming" target="_blank">GitHub</a> e provém de um tutorial no <a href="https://www.youtube.com/playlist?list=PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp" target="_blank">Youtube</a> que estarei acompanhando por enquanto.</em></p>
+<p style="text-align:right;"><em><strong>Até mais!</strong></em></p>
+<p><img src="{{ site.baseurl }}/assets/condicionais1.png" alt="condicionais" width="735" height="550" class="alignnone size-full wp-image-1682" /></p>

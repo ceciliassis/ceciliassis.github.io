@@ -1,0 +1,128 @@
+---
+layout: post
+title: String 1.0
+date: 2017-03-06 21:00:54.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- capitalize
+- concat
+- downcase
+- reverse
+- string
+- upcase
+meta:
+  _wpcom_is_markdown: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154896052138280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/838902270980947969";}}
+  _publicize_job_id: '2578458406'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6244667964310765568&type=U&a=l7E7
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+  _thumbnail_id: '1649'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/03/06/string-1-0/"
+---
+<p style="text-align:center;"><strong>Hey, como vai?!</strong></p>
+<p>Vamos falar de <em>Strings</em>? Como usual, usarei da documentação para trazer métodos que considero importantes, dentre os já estudados por mim.</p>
+<p>Já sabemos que para declarar uma <strong>string</strong>, basta declarar:</p>
+<p>[code lang="ruby"]<br />
+hello = 'hello'<br />
+[/code]</p>
+<p>E para visualizar, basta imprimir:</p>
+<p>[code lang="ruby"]<br />
+hello = 'hello'<br />
+puts hello<br />
+  #=&gt; hello<br />
+[/code]</p>
+<p>Aqui as Strings também são vetores, e como tais podemos acessá-los:</p>
+<p>[code lang="ruby"]<br />
+hello = 'hello'<br />
+puts hello[0..2]<br />
+  #=&gt; hel<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>STRING * 3</strong></p>
+<p>Bem, antes de falarmos do mais comum, falemos de algo inusitado, a multiplicação de Strings.</p>
+<p>Feita de forma bem simples, basta adicionarmos um <strong>asterisco</strong> (<span style="color:#ff6600;"><code>*</code></span>) e o <strong>número</strong> de vezes que queremos que tal string seja reproduzida:</p>
+<p>[code lang="ruby"]<br />
+hello = 'hello'<br />
+puts hello * 2<br />
+  #=&gt; hello<br />
+  #=&gt; hello<br />
+[/code]</p>
+<p>Legal, né?</p>
+<hr />
+<p style="text-align:center;"><strong>CONCATENAÇÃO</strong></p>
+<p>Enquanto opções de concatenação temos:</p>
+<p>[code lang="ruby"]<br />
+hello = 'hello'<br />
+hello &lt; hello Rubist</p>
+<p>hello += ', how are you'<br />
+puts hello<br />
+  #=&gt; hello Rubist, how are you</p>
+<p>hello.concat('?')<br />
+puts hello<br />
+  #=&gt; hello Rubist, how are you?<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>E O TAMANHO?</strong></p>
+<p>Para tal, temos as mesmas <strong>keywords</strong> que usamos com os vetores: <span style="color:#ff6600;"><code>size</code></span> e <span style="color:#ff6600;"><code>lenght</code></span>, todas informando o mesmo dado. O <span style="color:#ff6600;"><code>count</code></span> por outro lado, significa um método que conta quantidade de <em>chars</em> que dentro da string correspondem ao parâmetro dado, veja: <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-count" target="_blank">String#count</a>.</p>
+<p>[code lang="ruby"]<br />
+hello = 'Hello'<br />
+puts hello.size, hello.length<br />
+  #=&gt; 5<br />
+  #=&gt; 5<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>CASES</strong></p>
+<p>Se quisermos a <strong>primeira</strong> letra <strong>maiúscula</strong>:</p>
+<p>[code lang="ruby"]<br />
+puts hello.capitalize<br />
+  #=&gt; Hello<br />
+[/code]</p>
+<p>E <strong>todas</strong> as letras?</p>
+<p>[code lang="ruby"]<br />
+puts hello.upcase<br />
+  #=&gt; HELLO<br />
+[/code]</p>
+<p><strong>Minúsculas</strong>?</p>
+<p>[code lang="ruby"]<br />
+hello = 'HELLO'<br />
+puts hello.downcase<br />
+  #=&gt; hello<br />
+[/code]</p>
+<p>Podemos até <strong>inverter</strong> a caixa das letras?</p>
+<p>[code lang="ruby"]<br />
+hello = 'Hello'<br />
+puts hello.swapcase<br />
+  #=&gt; hELLO<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>REVERSE</strong></p>
+<p>Por fim, se quisermos a string ao <strong>contrário</strong> ...</p>
+<p>[code lang="ruby"]<br />
+hello = 'Hello'<br />
+puts hello.reverse<br />
+  #=&gt; olleH<br />
+[/code]</p>
+<hr />
+<p>Bem, como já falando de muita coisa hoje nos vemos no próximo post, ok?!</p>
+<p style="text-align:right;"><strong>Até mais!!</strong></p>
+<p><img src="{{ site.baseurl }}/assets/string1-03.png" alt="string1-0" width="735" height="550" class="alignnone size-full wp-image-1649" /></p>

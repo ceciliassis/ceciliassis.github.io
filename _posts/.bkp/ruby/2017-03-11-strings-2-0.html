@@ -1,0 +1,81 @@
+---
+layout: post
+title: Strings 2.0
+date: 2017-03-11 21:00:38.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- chars
+- deleção
+- delete
+- gsub
+- sub
+- substituição
+meta:
+  _rest_api_published: '1'
+  _wpcom_is_markdown: '1'
+  _rest_api_client_id: "-1"
+  _thumbnail_id: '1692'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154914943098280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/840669215497605121";}}
+  _publicize_job_id: '2760173940'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6246434908361814016&type=U&a=LJSZ
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/03/11/strings-2-0/"
+---
+<p style="text-align:center;"><strong>Hey, como vai?!</strong></p>
+<p>Faleremos de coisas mais 'avançadas', no ramo das <strong>Strings</strong> hoje, como: substituição, deleção e etc , shall we?</p>
+<hr />
+<p style="text-align:center;"><strong>SUB</strong></p>
+<p>Este nos permite substituir a <strong>primeira</strong> ocorrência de uma sequência de <em>chars</em> dentro da string, usando expressão regular ou não:</p>
+<p>[code lang=ruby]<br />
+hello = &#039;hello&#039;<br />
+puts hello.sub(&#039;l&#039;, &#039;*&#039;)<br />
+#=&gt; he*lo<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>GSUB</strong></p>
+<p>Enquanto o <span style="color:#ff6600;"><code>sub</code></span> substitui somente a primeira ocorrência, este nos permite substituir <strong>todas</strong>. Usando expressão regular ou não:</p>
+<p>[code lang=ruby]<br />
+hello = &#039;hello&#039;<br />
+puts hello.gsub(&#039;l&#039;, &#039;*&#039;)<br />
+#=&gt; he**o<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>DELETE</strong></p>
+<p>O Ruby nos permite deletar strings <em>específicas</em> dentro de outra string.</p>
+<p><img class=" size-full wp-image-1552 aligncenter" src="{{ site.baseurl }}/assets/stringdelete.png" alt="stringdelete" width="611" height="111" /></p>
+<p>Aqui notamos que podemos excluir mais de um string por vez e/ou usar expressões regulares.</p>
+<hr />
+<p style="text-align:center;"><strong>ARRAY</strong></p>
+<p>Este método é super legal, e o descobri dando uma olhada na documentação. Com ele, temos enquanto retorno um <em>array</em> formado com <strong>cada</strong> caractere presente na string.</p>
+<p>[code lang=ruby]<br />
+hello = &#039;Hello&#039;<br />
+p hello.chars<br />
+#=&gt; [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]<br />
+[/code]</p>
+<p>Aqui usamos o comando <span style="color:#ff6600;"><code>p</code></span>, que terá um post individual explicando sua finalidade.</p>
+<hr />
+<p style="text-align:center;"><strong>SPLIT</strong></p>
+<p>E por fim temos o <span style="color:#ff6600;"><code>split</code></span>, já conhecido em outras linguagens por separar a string frente um delimitador. No Ruby ele aceita dois parâmetros: <em>delimitador</em> e <em>limite</em>, que demarca <strong>até</strong> quantas separações podem ser feitas.</p>
+<p><img class=" size-full wp-image-1556 aligncenter" src="{{ site.baseurl }}/assets/stringsplit.png" alt="stringsplit" width="612" height="373" /></p>
+<p>Ah! Ele também aceita expressão regular.</p>
+<hr />
+<p style="text-align:right;"><strong>Até mais!!</strong></p>
+<p><img src="{{ site.baseurl }}/assets/string2-02.png" alt="string2-0" width="735" height="550" class="alignnone size-full wp-image-1692" /></p>

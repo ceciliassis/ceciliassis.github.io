@@ -1,0 +1,109 @@
+---
+layout: post
+title: O Basicão!
+date: 2016-11-18 16:59:58.000000000 -02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- boleano
+- comentarios
+- int
+- string
+- variaveis
+meta:
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154556465513280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/799658429346381824";}}
+  _wpcom_is_markdown: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '29054756365'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  _thumbnail_id: '1687'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2016/11/18/o-basicao/"
+---
+<p><em><strong>Hey, como vai?!</strong></em></p>
+<p>Ainda que eu já saiba programar, sempre quando vou aprender algo novo procuro começar do começo e os estudos dessa semana foram bem nessa pegada ... tipos primitivos e contas aritméticas por exemplo. Então, vamos lá!</p>
+<hr />
+<p style="text-align:center;"><strong>Print vs Puts</strong></p>
+<p>Ambos os códigos servem para impressão de algo na tela. O comando <span style="color:#ff6600;"><code>puts</code></span> insere um <strong>new line ( <span style="color:#ff6600;"><code>\n</code></span> )</strong> no fim de cada chamada, enquanto o <span style="color:#ff6600;"><code>print</code></span> não o faz.</p>
+<p>[code lang="ruby"]<br />
+puts 'Hello, World!'<br />
+   #=&gt; Hello, World!<br />
+print 'Hello, World!'<br />
+print 'Hello, World!'<br />
+   #=&gt; Hello, World!Hello, World!<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Variáveis</strong></p>
+<p>O Ruby não é uma linguagem fortemente tipada como o <em>Java</em> e por isso é de fácil entendimento. Muito semelhante ao <em>JavaScript</em> uma vez que a variável é declarada essa pode assumir qualquer valor/tipo.</p>
+<p>É convencional que os nomes associados às variáveis sejam minúsculos e separados por <strong>underline</strong> ou <strong>underscore</strong> ( _ ).</p>
+<p>[code lang="ruby"]<br />
+o_boleano = true<br />
+puts o_boleano<br />
+   #=&gt; true</p>
+<p>a_string = 'Hello, World'<br />
+puts a_string<br />
+  #=&gt; Hello, World</p>
+<p>o_numero = 5<br />
+puts o_numero<br />
+   #=&gt; 5<br />
+o_numero = 5.5<br />
+puts o_numero<br />
+   #=&gt; 5.5<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Cálculos </strong><b>Aritméticos</b></p>
+<p>Soma, divisão e afins funcionam no Ruby como já conhecemos, porém a exponenciação é diferente, logo:</p>
+<p>[code lang="ruby"]<br />
+puts 6 + 1<br />
+  #=&gt; 7<br />
+puts 6 - 1<br />
+  #=&gt; 5<br />
+puts 15 % 6<br />
+  #=&gt; 3<br />
+puts 10**2<br />
+  #=&gt; 100<br />
+[/code]</p>
+<p>Como visto, a exponenciação é feita por meio de dois asteriscos ( * ), no exemplo 10x10 ou 10^2.</p>
+<hr />
+<p style="text-align:center;"><strong>Comentários</strong></p>
+<p>Todo bom programador gosta de comentar seus códigos, seja para ler e entender depois, servir de lembrete para algo pendente ou documentá-los. Como visto acima, os comentários em linha única são marcado por <span style="color:#ff6600;"><code>#</code></span>, o famoso <strong>jogo-da-velha</strong>. Para comentarmos em <em>múltiplas</em> linhas, fazemos:</p>
+<p>[code lang="ruby"]<br />
+=begin<br />
+Estou no blog me, Ruby Girl!<br />
+Nao precisa do # .<br />
+=end</p>
+<p># Somente uma linha ...<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Curiosidades</strong></p>
+<p>Para saber a qual classe pertence certo objeto no Ruby, fazemos:</p>
+<p>[code lang="ruby"]<br />
+o_numero = 5<br />
+puts o_numero.class<br />
+  #=&gt; FixNum<br />
+o_numero = 5.5<br />
+puts o_numero.class<br />
+  #=&gt; Float<br />
+[/code]</p>
+<p>Nesse código é possível perceber algo interessante: O tão conhecido <strong>int </strong>em Ruby é <strong>FixNum</strong>.<strong> </strong></p>
+<p>Quanto as <strong>strings</strong>, o Ruby aceita aspas simples ( ' ' ) ou duplas ( " " ), preferindo simples para uso corriqueiro e duplas para caracteres especiais (aspas simples na frase, por exemplo) e concatenação de strings.</p>
+<hr />
+<p>Com isso queridos, terminamos o post de hoje. Espero que tenham gostado. Se ficou alguma dúvida, não hesitem em me dizer!</p>
+<p><em>Todo conteúdo trazido aqui se encontra no <a href="https://github.com/ceciliassis/meRubyGirl/tree/master/rubyProgramming" target="_blank">GitHub</a> e provém de um tutorial no <a href="https://www.youtube.com/playlist?list=PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp" target="_blank">Youtube</a> que estarei acompanhando por enquanto.</em></p>
+<p style="text-align:right;"><em><strong>Até mais!</strong></em></p>
+<p><img src="{{ site.baseurl }}/assets/basicao.png" alt="basicao" width="735" height="550" class="alignnone size-full wp-image-1687" /></p>

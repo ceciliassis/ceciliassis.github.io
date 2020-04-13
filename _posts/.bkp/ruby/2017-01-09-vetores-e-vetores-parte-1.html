@@ -1,0 +1,143 @@
+---
+layout: post
+title: Vetores e Vetores, parte 1
+date: 2017-01-09 15:00:41.000000000 -02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- array
+- vetor
+meta:
+  _wpcom_is_markdown: '1'
+  _rest_api_published: '1'
+  _thumbnail_id: '1674'
+  _rest_api_client_id: "-1"
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154726274893280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/818525133564444672";}}
+  _publicize_job_id: '575356097'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/01/09/vetores-e-vetores-parte-1/"
+---
+<p style="text-align:center;"><em><strong>Hey, como vai!?</strong></em></p>
+<p>Hoje vim falar do famigerado <strong>vetor</strong>, vulgo <em>Array. </em>O Ruby traz várias coisas bem legais com e para ele, e vamos ver algumas delas nesta série de posts.</p>
+<p>Para declarar um array podemos fazer da seguinte forma:</p>
+<p>[code lang="ruby"]<br />
+ary = [1, 2, 3, 4]<br />
+aro = []<br />
+[/code]</p>
+<p>O Ruby permite array com valores de vários tipos:</p>
+<p>[code lang="ruby"]<br />
+ary = ['a', 1, 'casinha', 2.1, true]<br />
+  #=&gt; ['a', 1, 'casinha', 2.1, true]<br />
+[/code]</p>
+<p>É uma boa prática que os separadores dos elementos, as vírgulas, sejam acompanhadas por espaços. Melhor compreensão do código.</p>
+<p>Quando queremos declarar um array com um tamanho inicial pré-definido, podemos usar explicitamente sua classe:</p>
+<p>[code lang="ruby"]<br />
+ary = Array.new(3)<br />
+#=&gt; [nil, nil, nil]<br />
+[/code]</p>
+<p>Se quisermos algum valor inicial:</p>
+<p>[code lang="ruby"]<br />
+ary = Array.new(3, 'ruby')<br />
+#=&gt; ['ruby', 'ruby', 'ruby']<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Acessando índices únicos</strong></p>
+<p>Existem algumas formas de acesso a valores em Ruby. Uma delas é bem conhecida pelos programadores de C/C++ e JS:</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[0]<br />
+puts ary[1]<br />
+puts ary[2]<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>ruby<br />
+oi<br />
+gente</p></blockquote>
+<p>Como pudemos ver, o Ruby também faz a contagem de índices iniciando do zero (0). Logo, a <em>string</em> <span style="color:#ff6600;"><code>'ruby'</code></span> tem índice <span style="color:#ff6600;"><code>0</code></span>, e assim por diante.</p>
+<p>Outra maneira de acesso é:</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary.at(0)<br />
+#=&gt; ruby<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Acessando ranges (intervalos)</strong></p>
+<p>Outra característica sensacional do Ruby é que ele permite o acesso índices por meio de intervalos. Enquanto em outras linguagens precisamos fazer um laço para isso, aqui temos outras formas.</p>
+<p>O uso de pontos finais é uma delas. Dependendo do número de pontos finais no comando, diferentes informações são passadas ao interpretador:</p>
+<ol>
+<li>Dois pontinhos -&gt; (<strong>..</strong>): Informa ao interpretador que queremos os valores do índice x ao y, <strong>incluindo o y</strong>.</li>
+</ol>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[0..2]<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>ruby<br />
+oi<br />
+gente</p></blockquote>
+<ol>
+<li value="2">Três pontinhos -&gt; (<strong>...</strong>): Informa ao interpretador que queremos os valores do índice x ao y, <strong>não incluindo o y</strong>.</li>
+</ol>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[0...2]<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>ruby<br />
+oi</p></blockquote>
+<p>As vírgulas também podem ser usadas, e entre elas temos primeiro o índice de onde queremos começar e segundo quantos números após ele. Logo se temos:</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[0, 2]<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>ruby<br />
+oi</p></blockquote>
+<p>Dizemos ao interpretador, que a partir do índice 0 queremos 2 valores, isto é o valor no índice e mais um. Vamos a outro exemplo:</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[0, 1] #=&gt; ruby<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><span style="color:#008000;"><strong>BÔNUS TIME !!</strong></span></p>
+<p>Quando se trata do acesso a índices no vetor, o Ruby também traz uma funcionalidade muito legal: <strong>O índice negativo</strong>. Este conta de trás para frente os elementos do array, começando do <strong><em>1</em></strong> e mostra o valor no local desejado.</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[-1]<br />
+#=&gt; gente<br />
+[/code]</p>
+<p>Podemos usar dessa ferramenta para o acesso em ranges idem. Com o mesmo array anterior, fazemos:</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[0..-2]<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>ruby<br />
+oi</p></blockquote>
+<p>Usando a vírgula:</p>
+<p>[code lang="ruby"]<br />
+ary = ['ruby', 'oi', 'gente']<br />
+puts ary[-2, 2]<br />
+[/code]</p>
+<p>Saída:</p>
+<blockquote><p>oi<br />
+gente</p></blockquote>
+<hr />
+<p>Bom, por hoje é só pessoal, vejo vocês no próximo post! Não deixem de escrever suas dúvidas!</p>
+<p style="text-align:right;"><strong><em>Até mais!!</em></strong></p>
+<p><img src="{{ site.baseurl }}/assets/vetores12.png" alt="vetores1" width="735" height="550" class="alignnone size-full wp-image-1674" /></p>

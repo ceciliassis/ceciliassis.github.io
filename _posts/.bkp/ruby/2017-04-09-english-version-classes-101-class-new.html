@@ -1,0 +1,79 @@
+---
+layout: post
+title: "[ENGLISH VERSION] Classes 101: Class.new"
+date: 2017-04-09 21:06:52.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- ENGLISH Posts
+- Ruby
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _thumbnail_id: '1816'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10155001681768280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/851179671676796928";}}
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '3814734788'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6256945367837929472&type=U&a=6AVk
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/04/09/english-version-classes-101-class-new/"
+---
+<p style="text-align:center;"><b><i>Hey, how are you?</i></b></p>
+<p>Today we are going to study how to define classes in Ruby, because like everything in it is an object, it's about time we know how to set up ours:</p>
+<p>[code lang=ruby]<br />
+class Book<br />
+end<br />
+[/code]</p>
+<p>Everytime we create one class it's good that we write the method <span style="color:#ff6600;"><code>initialize</code></span>, which is always called when a new instance of our class is made. The well known <strong>constructor</strong>:</p>
+<p>[code lang=ruby]<br />
+class Book<br />
+  def initialize<br />
+  end<br />
+end<br />
+[/code]</p>
+<p>Ruby doesn't support method override, so only the last one is considered. As an alternative, we can use default arguments (a tip is to use them at the end of our list, because Ruby has a strange behavior otherwise, see <a href="https://github.com/ceciliassis/ruby-style-guide#optional-arguments">here</a>)</p>
+<p>[code lang=ruby]<br />
+class Book<br />
+  def initialize(author, name, code = &#039;1&#039;)<br />
+    puts &quot;author: #{author}, name: #{name}, code: #{code}&quot;<br />
+  end<br />
+end<br />
+[/code]</p>
+<p>This way, if we instanciate an object without the code value, it's all good:</p>
+<p>[code lang=ruby]<br />
+class Book<br />
+  def initialize(author, name, code = &#039;1&#039;)<br />
+   puts &quot;author: #{author}, name: #{name}, code: #{code}&quot;<br />
+  end<br />
+end</p>
+<p>book1 = Book.new(&#039;Cecilia Assis&#039;, &#039;Ruby 101&#039;)<br />
+book2 = Book.new(&#039;Julia Tolezano&#039;, &#039;Ta todo mundo mal&#039;, &#039;12345&#039;)<br />
+[/code]</p>
+<p>Outcome:</p>
+<blockquote><p>
+  author: Cecilia Assis, name: Ruby 101, code: 1<br />
+  author: Julia Tolezano, name: Ta todo mundo mal, code: 12345
+</p></blockquote>
+<p>So, as we can see, because of what we've defined for the <span style="color:#ff6600;"><code>initialize</code></span> method, the infos about the Book are shown.</p>
+<p>With the example above we already know how to declare an object and defined the first thing that is going to happen with it, right?<br />
+All we need to do is: give it a name, write the <span style="color:#ff6600;"><code>initialize</code></span> method and instanciate it.</p>
+<p><strong>But if we want another methods inside our class? Do you have any ideas? Let me know in the comments!!</strong></p>
+<p>See you on the next post ...</p>
+<p style="text-align:right;"><b><i>... Bye!!</i></b></p>
+<p><img src="{{ site.baseurl }}/assets/classe101newen.png" alt="classe101newEN" width="735" height="550" class="alignnone size-full wp-image-1816" /></p>

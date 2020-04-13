@@ -1,0 +1,129 @@
+---
+layout: post
+title: Ruby CASE
+date: 2017-02-27 12:52:56.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- case
+- exit
+- switch
+- then
+- when
+meta:
+  _wpcom_is_markdown: '1'
+  _thumbnail_id: '1667'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154872382618280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/836197448867581952";}}
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '2307763322'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6241963142239318016&type=U&a=43g-
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/02/27/ruby-case/"
+---
+<h4 style="text-align:right;">Read the ENGLISH VERSION, <a href="https://merubygirl.wordpress.com/2017/06/01/english-version-ruby-case/" target="_blank" rel="noopener noreferrer">here</a>.</h4>
+<p style="text-align:center;"><em><strong>Hey, como vai?!</strong></em></p>
+<p>Bem, hoje trago a forma como o Ruby trabalha seu switch case. Vamos lá!</p>
+<p>A forma básica para tal é:</p>
+<p>[code lang="ruby"]<br />
+greeting = 'hey'</p>
+<p>case greeting<br />
+when 'hey'<br />
+  puts 'how are you?'<br />
+when 'hi'<br />
+  puts 'hello'<br />
+else puts 'i don\'t understand'<br />
+end<br />
+[/code]</p>
+<p>O <span style="color:#ff6600;"><code>case</code></span> deve terminar com um <span style="color:#ff6600;"><code>end</code></span>, mostrando que a condicional <strong>finalizou</strong> e cada caso é testado com um <span style="color:#ff6600;"><code>when</code></span>.</p>
+<hr />
+<p style="text-align:center;"><strong>Then</strong></p>
+<p>Agora vamos as variações. A primeira é com o uso do <span style="color:#ff6600;"><code>then</code></span>, que pode ter múltiplas linhas ou não, da mesma forma que seria se ali ele não estivesse.</p>
+<p>[code lang="ruby"]<br />
+greeting = 'hey'</p>
+<p>case greeting<br />
+when 'hey' then puts 'how are you?'<br />
+when 'hi' then<br />
+  puts 'hello'<br />
+when 'ahoy'<br />
+  then puts 'ahoy back'<br />
+when 'heyhey'<br />
+  then<br />
+    puts 'heyheyhey'<br />
+end<br />
+[/code]</p>
+<p>Aqui temos um código propositalmente bagunçado com o uso do then, que  traduzindo coloquialmente do inglês temos: (<span style="color:#ff6600;"><code>when</code></span>) <em>quando</em> algo acontecer (<span style="color:#ff6600;"><code>then</code></span>) <em>então</em> faça isso.</p>
+<p>Testando o código notamos que todos os casos funcionam, mas visualmente incomoda. De qualquer forma, escolha a melhor forma pra você!</p>
+<hr />
+<p style="text-align:center;"><strong>Or</strong></p>
+<p>A segunda variação traz algo extremamente legal no Ruby, o teste de múltiplos casos. Daí você se pergunta: <em>Mas não é isso que o case faz?</em> Sim, sim, é. Mas aqui, podemos testar também no <span style="color:#ff6600;"><code>when</code></span>, veja:</p>
+<p>[code lang="ruby"]<br />
+greeting = 'hey'</p>
+<p>case greeting<br />
+when 'hey', 'Hey'<br />
+  puts 'how are you?'<br />
+when 'hi', 'Hi'<br />
+  puts 'hello'<br />
+else puts 'i don\'t understand'<br />
+end<br />
+[/code]</p>
+<p>O múltiplo teste vê se a String começa ou não com letra maiúscula, legal né?</p>
+<hr />
+<p style="text-align:center;"><strong>Exit</strong></p>
+<p>É possível usar uma <em>keyword</em> para demarcar o fim do caso, porém com um breve teste percebi que se estivermos no <span style="color:#ff6600;"><code>irb</code></span>, terminal ruby, esta encerrará a execução assim que a condição for testada.</p>
+<p>O <span style="color:#ff6600;"><code>exit</code></span> também <strong>não</strong> deve ser usado depois do <span style="color:#ff6600;"><code>then</code></span>, um erro é lançado.</p>
+<p>[code lang="ruby"]<br />
+greeting = 'hey'</p>
+<p>case greeting<br />
+when 'hey', 'Hey'<br />
+  puts 'how are you?'<br />
+  exit<br />
+when 'hi', 'Hi'<br />
+  puts 'hello'<br />
+  exit<br />
+else puts 'i don\'t understand'<br />
+end<br />
+[/code]</p>
+<hr />
+<p style="text-align:center;"><strong>Retorno de valor</strong></p>
+<p>Para finalizar sabemos que no Ruby a última linha escrita certas partes do código conta como valor retornado e no case isso não é diferente.</p>
+<p>[code lang="ruby"]<br />
+car = 'Patriot'</p>
+<p>manufacturer = case car<br />
+   when 'Focus'     then 'Ford'<br />
+   when 'Navigator' then'Lincoln'<br />
+   when 'Camry'     then 'Toyota'<br />
+   when 'Civic'     then 'Honda'<br />
+   when 'Patriot'   then 'Jeep'<br />
+   when 'Jetta'     then 'VW'<br />
+   when 'Ceyene'    then 'Porsche'<br />
+   when 'Outback'   then 'Subaru'<br />
+   when '520i'      then 'BMW'<br />
+   when 'Tundra'    then 'Nissan'<br />
+   else 'Unknown'<br />
+end</p>
+<p>puts 'The' + car  + ' is made by '  + manufacturer<br />
+    #=&gt; The Patriot is made by Jeep<br />
+[/code]</p>
+<hr />
+<p>Bem, por hoje é só. Brinque um pouco e se divirta com o que o Ruby pode fazer!</p>
+<p style="text-align:right;"><em><strong>Até mais!!</strong></em></p>
+<h5 style="text-align:right;">Fontes: <a href="https://www.youtube.com/watch?v=Dji9ALCgfpM&amp;t=235s" target="_blank" rel="noopener noreferrer">Ruby Programming - Derek Banas</a>, <a href="http://www.techotopia.com/index.php/The_Ruby_case_Statement" target="_blank" rel="noopener noreferrer">The Ruby case Statement</a></h5>
+<p><img src="{{ site.baseurl }}/assets/rubycase1.png" alt="rubycase" width="735" height="550" class="alignnone size-full wp-image-1667" /></p>

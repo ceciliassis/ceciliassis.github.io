@@ -16,21 +16,21 @@
 title: Cecília Assis
 email: cyassis@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Cecília Assis' personal website + blog that ensembls everything that is meanfingful to her.
+  Cecília Assis' personal website + blog that ensembles everything that is meanfingful to her.
   Focuses on Machine Learning, Ruby, Python and Finances.
 # twitter_username: username
 keywords: machine learning, ruby, python
 github_username: ceciliassis
 minimal_mistakes_skin: default
 search: true
-repository: github.com/ceciliassis/ceciliassis.github.io
+# repository: ceciliassis/ceciliassis.github.io
 
 # Build settings
 markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 10 # amount of posts to show
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 

@@ -1,0 +1,129 @@
+---
+layout: post
+title: "[ENGLISH VERSION] Ruby Case"
+date: 2017-06-01 13:43:15.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- ENGLISH Posts
+- Ruby
+tags:
+- case
+- english
+- exit
+- then
+- version
+- when
+meta:
+  _wpcom_is_markdown: '1'
+  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10155169217823280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/870319901809885184";}}
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _thumbnail_id: '1981'
+  _publicize_job_id: '5673545837'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6276085596083539969&type=U&a=g2nk
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/06/01/english-version-ruby-case/"
+---
+<p style="text-align:center;"><strong>Hey, how are you!?!</strong></p>
+<p>Well, today I bring the way how Ruby treats it's <span style="color:#ff6600;"><code>switch case</code></span>. Let's go!</p>
+<p>The easy way is:</p>
+<p>[code lang=ruby]<br />
+greeting = &#039;hey&#039;</p>
+<p>case greeting<br />
+when &#039;hey&#039;<br />
+  puts &#039;how are you?&#039;<br />
+when &#039;hi&#039;<br />
+  puts &#039;hello&#039;<br />
+else puts &#039;i don\&#039;t understand&#039;<br />
+end<br />
+[/code]</p>
+<p>The <span style="color:#ff6600;"><code>case</code></span> must end with an <span style="color:#ff6600;"><code>end</code></span>, showing that the condition is done and each case is tested with a <span style="color:#ff6600;"><code>when</code></span> statement.</p>
+<hr />
+<p style="text-align:center;"><strong>THEN</strong></p>
+<p>Now the variations. The first one is with the <span style="color:#ff6600;"><code>then</code></span> statement, that may have multiple lines or not. The same way it would be if it wasn't there.</p>
+<p>[code lang=ruby]<br />
+greeting = &#039;hey&#039;</p>
+<p>case greeting<br />
+when &#039;hey&#039; then puts &#039;how are you?&#039;<br />
+when &#039;hi&#039; then<br />
+  puts &#039;hello&#039;<br />
+when &#039;ahoy&#039;<br />
+  then puts &#039;ahoy back&#039;<br />
+when &#039;heyhey&#039;<br />
+  then<br />
+    puts &#039;heyheyhey&#039;<br />
+end<br />
+[/code]</p>
+<p>Here we have a code intentionally messed up using <span style="color:#ff6600;"><code>then</code></span>, that if we "humanize" it we have: <em>when</em> something happen <em>then</em> do this.</p>
+<p>Testing the code we notice that all "whens" work, but visually disturbs, so pick the best <strong>one</strong> for you!</p>
+<hr />
+<p style="text-align:center;"><strong>ON</strong></p>
+<p>The second variation brings something extremely cool in Ruby: the test of multiple conditions.<br />
+So you ask me: <em>But isn't it what case do?</em> Yes, yes, it is, but here we can test inside <span style="color:#ff6600;"><code>when</code></span> <em>also</em>. See:</p>
+<p>[code lang=ruby]<br />
+greeting = &#039;hey&#039;</p>
+<p>case greeting<br />
+when &#039;hey&#039;, &#039;Hey&#039;<br />
+  puts &#039;how are you?&#039;<br />
+when &#039;hi&#039;, &#039;Hi&#039;<br />
+  puts &#039;hello&#039;<br />
+else puts &#039;i don\&#039;t understand&#039;<br />
+end<br />
+[/code]</p>
+<p>The multiple test sees if a <em>String</em> starts or no with a capital letter, cool hun?</p>
+<hr />
+<p style="text-align:center;"><strong>EXIT</strong></p>
+<p>It is possible to use a <em>keyword</em> to indicate the end of a condition, but with a brief test I've noticed that is we are on <span style="color:#ff6600;"><code>irb</code></span>, Ruby's terminal, <span style="color:#ff6600;"><code>irb</code></span> will finish the execution as soon as a condition is tested.</p>
+<p>[code lang=ruby]<br />
+greeting = &#039;hey&#039;</p>
+<p>case greeting<br />
+when &#039;hey&#039;, &#039;Hey&#039;<br />
+  puts &#039;how are you?&#039;<br />
+  exit<br />
+when &#039;hi&#039;, &#039;Hi&#039;<br />
+  puts &#039;hello&#039;<br />
+  exit<br />
+else puts &#039;i don\&#039;t understand&#039;<br />
+end<br />
+[/code]</p>
+<p>The <span style="color:#ff6600;"><code>exit</code></span> must <strong>not</strong> be used after <span style="color:#ff6600;"><code>then</code></span>, an error is raised.</p>
+<hr />
+<p style="text-align:center;"><strong>RETURNING A VALUE</strong></p>
+<p>Last but not least, we know that the last line written in some parts of our code counts as a <span style="color:#ff6600;"><code>return</code></span> statement, the same applies for <span style="color:#ff6600;"><code>cases</code></span>.</p>
+<p>[code lang=ruby]<br />
+car = &#039;Patriot&#039;</p>
+<p>manufacturer = case car<br />
+   when &#039;Focus&#039;     then &#039;Ford&#039;<br />
+   when &#039;Navigator&#039; then&#039;Lincoln&#039;<br />
+   when &#039;Camry&#039;     then &#039;Toyota&#039;<br />
+   when &#039;Civic&#039;     then &#039;Honda&#039;<br />
+   when &#039;Patriot&#039;   then &#039;Jeep&#039;<br />
+   when &#039;Jetta&#039;     then &#039;VW&#039;<br />
+   when &#039;Ceyene&#039;    then &#039;Porsche&#039;<br />
+   when &#039;Outback&#039;   then &#039;Subaru&#039;<br />
+   when &#039;520i&#039;      then &#039;BMW&#039;<br />
+   when &#039;Tundra&#039;    then &#039;Nissan&#039;<br />
+   else &#039;Unknown&#039;<br />
+end</p>
+<p>puts &#039;The&#039; + car  + &#039; is made by &#039;  + manufacturer<br />
+    #=&gt; The Patriot is made by Jeep<br />
+[/code]</p>
+<p>That's all folks! Play a little and have fun with Ruby (let me see it on comments!)</p>
+<p style="text-align:right;"><em><strong>See ya!</strong></em></p>
+<p><img class=" size-full wp-image-1981 aligncenter" src="{{ site.baseurl }}/assets/rubycaseeng.png" alt="rubycaseENG" width="735" height="550" /></p>

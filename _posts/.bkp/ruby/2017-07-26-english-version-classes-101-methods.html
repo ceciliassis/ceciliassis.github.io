@@ -1,0 +1,88 @@
+---
+layout: post
+title: "[ENGLISH VERSION] Classes 101: Methods"
+date: 2017-07-26 22:27:03.000000000 -03:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- ENGLISH Posts
+- Ruby
+tags:
+- class
+- classes
+- initialize
+- method
+- methods
+meta:
+  _wpcom_is_markdown: '1'
+  _thumbnail_id: '1998'
+  _publicize_done_external: a:2:{s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/890383006548013057";}s:8:"facebook";a:1:{i:17534513;s:38:"https://facebook.com/10155361279918280";}}
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '7529157578'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6296148700397912064&type=U&a=2h4Y
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+  _publicize_done_17773429: '1'
+  _wpas_done_17534513: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/07/26/english-version-classes-101-methods/"
+---
+<p style="text-align:center;"><strong>Hey, how are you?</strong></p>
+<p>Like said on the first post of this serie, today we are going to know how we add new methods to our class, and so much more.</p>
+<p>Inside the method <span style="color:#ff6600;"><code>initialize</code></span> we can have anything and today we are going to use it to "<em>initialize</em>" our variables.</p>
+<p>[code lang=ruby]<br />
+class Book<br />
+ def initialize(author, name, isbn)<br />
+  @author = author<br />
+  @name = name<br />
+  @isbn = isbn<br />
+  puts &quot;Printing the book \&quot;#{@name}\&quot;&quot;<br />
+ end<br />
+end<br />
+[/code]</p>
+<p>We use the <span style="color:#ff6600;"><code>@</code></span> when we declare a instance variable, meaning the it only belongs to the object.</p>
+<p>Well, now that we have the variables we can define a method that shows their content, like any other.</p>
+<p>[code lang=ruby]<br />
+def about<br />
+puts &quot;Printing the book \&quot;#{@name}\&quot;&quot;<br />
+end<br />
+[/code]</p>
+<p>The whole code:</p>
+<p>[code lang=ruby]<br />
+class Book<br />
+ def initialize(author, name, isbn)<br />
+  @author = author<br />
+  @name = name<br />
+  @isbn = isbn<br />
+  puts &quot;Printing the book \&quot;#{@name}\&quot;&quot;<br />
+ end</p>
+<p>  def about<br />
+   puts &quot;Author: #{@athor}, name: #{@name}, ISBN: #{@isbn}&quot;<br />
+  end<br />
+end<br />
+[/code]</p>
+<p>Executing:</p>
+<p>[code lang=ruby]<br />
+book1 = Book.new(&#039;Cecilia Assis&#039;, &#039;Ruby 101&#039;, &#039;123456&#039;)<br />
+book1.about<br />
+[/code]</p>
+<p>Out:</p>
+<blockquote><p>
+  Printing the book "Ruby 101"<br />
+  Author: Cecilia Assis, name: Ruby 101, ISBN: 123456
+</p></blockquote>
+<p>That's all, folks ... Now that you know how to make your own methods, let me see some use on the comments!</p>
+<p style="text-align:right;"><strong>See ya!</strong></p>
+<p><img src="{{ site.baseurl }}/assets/engclasse101metods11.png" alt="ENGclasse101metods1" width="100%" class="alignnone size-full wp-image-1998" /></p>

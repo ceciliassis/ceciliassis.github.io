@@ -1,0 +1,67 @@
+---
+layout: post
+title: Operador TERNÁRIO (?)
+date: 2017-02-15 19:57:31.000000000 -02:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Ruby
+tags:
+- "?"
+- interrogação
+- operador
+- ternário
+meta:
+  _wpcom_is_markdown: '1'
+  _thumbnail_id: '1669'
+  _publicize_done_external: a:1:{s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/831955640054644738";}}
+  publicize_linkedin_url: https://www.linkedin.com/updates?discuss=&scope=534137417&stype=M&topic=6237721332805627905&type=U&a=YO_p
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _publicize_job_id: '1896250165'
+  _publicize_done_16115497: '1'
+  _wpas_done_15941414: '1'
+  _publicize_done_16115499: '1'
+  _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl
+  _publicize_done_16680227: '1'
+  _wpas_done_16474047: '1'
+author:
+  login: merubygirl
+  email: cyassis@gmail.com
+  display_name: Me, Ruby Girl.
+  first_name: ''
+  last_name: ''
+permalink: "/2017/02/15/operador-ternario/"
+---
+<p style="text-align:center;"><em><strong>Hey, como vai?!</strong></em></p>
+<p>Creio que hoje teremos um post pequeno. Falaremos do <strong>operador ternário</strong>.</p>
+<p>Um exemplo básico é usando uma condição junto a um <span style="color:#ff6600;"><code>puts</code></span>:</p>
+<p>[code lang="ruby"]<br />
+age = 10<br />
+puts (age &gt; 10) ? 'maior que 10' : 'menor que 10'<br />
+    #=&gt; menor que 10<br />
+[/code]</p>
+<p>Como várias coisas em Ruby, aqui os parênteses também são <strong>opcionais</strong>.</p>
+<hr />
+<p>Agora vamos a um exemplo um pouco mais avançado. Se quisermos saber qual argumento passar a um método podemos:</p>
+<p>[code lang="ruby"]<br />
+# Passar d or e?<br />
+method_call(a, b, a + b &gt; c ? d : e)<br />
+[/code]</p>
+<p>Aqui temos variáveis quaisquer <span style="color:#ff6600;"><code>a</code></span> e <span style="color:#ff6600;"><code>b</code></span> que já definimos enquanto valores os métodos, porém aplicamos uma <strong>condição</strong> ao último parâmetro.</p>
+<hr />
+<p>Podemos usar a mesma linha de raciocínio acima ao determinar o valor de uma variável:</p>
+<p>[code lang="ruby"]<br />
+# Atribuir c or d?<br />
+a = b &gt; 10 ? c : d<br />
+[/code]</p>
+<p>Qual será o valor de <span style="color:#ff6600;"><code>a</code></span> de acordo com o de <span style="color:#ff6600;"><code>b</code></span>?</p>
+<hr />
+<p>Com um tema leve terminamos o post de hoje, mas já te motivo a explorar a linguagem! Ao infinito e além!</p>
+<p style="text-align:right;"><strong>Até mais!!</strong></p>
+<h5 style="text-align:right;">Fontes: <a href="https://www.youtube.com/watch?v=-FlndMkEa40&amp;list=PLMK2xMz5H5Zv8eC8b4K6tMaE1-Z9FgSOp&amp;t=519s&amp;index=26" target="_blank">Ternary Conditional Expression</a>, <a href="http://ruby.about.com/od/beginningruby/a/The-Ternary-Or-Conditional-Operator.htm" target="_blank">Operators in Ruby</a>,<a href="https://www.youtube.com/watch?v=Dji9ALCgfpM&amp;t=235s" target="_blank">Ruby Programming</a>.</h5>
+<p><img src="{{ site.baseurl }}/assets/ternario1.png" alt="ternario" width="735" height="550" class="alignnone size-full wp-image-1669" /></p>

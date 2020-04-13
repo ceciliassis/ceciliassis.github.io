@@ -1,0 +1,824 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.19.1 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Tudo o que você precisa saber sobre loops e iteradores em Ruby! - Cecília Assis</title>
+<meta name="description" content="Oi, tudo bem com você? Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?  ">
+
+
+  <meta name="author" content="Cecília Assis">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Cecília Assis">
+<meta property="og:title" content="Tudo o que você precisa saber sobre loops e iteradores em Ruby!">
+<meta property="og:url" content="http://localhost:4000/ruby/loops-iteradores/">
+
+
+  <meta property="og:description" content="Oi, tudo bem com você? Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?  ">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2017-09-28T18:00:24-03:00">
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/ruby/loops-iteradores/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": null,
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Cecília Assis Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          Cecília Assis
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/posts/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/about/">About</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <svg class="icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.99 16">
+            <path d="M15.5,13.12L13.19,10.8a1.69,1.69,0,0,0-1.28-.55l-0.06-.06A6.5,6.5,0,0,0,5.77,0,6.5,6.5,0,0,0,2.46,11.59a6.47,6.47,0,0,0,7.74.26l0.05,0.05a1.65,1.65,0,0,0,.5,1.24l2.38,2.38A1.68,1.68,0,0,0,15.5,13.12ZM6.4,2A4.41,4.41,0,1,1,2,6.4,4.43,4.43,0,0,1,6.4,2Z" transform="translate(-.01)"></path>
+          </svg>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/images/bio-photo.png" alt="Cecília Assis" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">Cecília Assis</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>My awesome biography constrained to a sentence or two goes here.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+
+      
+        
+          
+            <li><a href="https://ceciliassis.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://github.com/ceciliassis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+            <li><a href="https://linkedin.com/in/ceciliassis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span class="label">Linkedin</span></a></li>
+          
+        
+          
+            <li><a href="https://instagram.com/aceciliassis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Tudo o que você precisa saber sobre loops e iteradores em Ruby!">
+    <meta itemprop="description" content="Oi, tudo bem com você?Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?">
+    <meta itemprop="datePublished" content="2017-09-28T18:00:24-03:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Tudo o que você precisa saber sobre loops e iteradores em Ruby!
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p style="text-align:center;"><strong>Oi, tudo bem com você?</strong></p>
+<p>Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?</p>
+
+<p class="notice">Read the <a href="https://merubygirl.wordpress.com/2017/05/25/english-version-loops-1/" target="_blank" rel="noopener noreferrer">ENGLISH VERSION</a>.</p>
+
+<!-- No post sobre blocos, falamos rapidamente sobre iteradores e entendemos um pouquinho sobre como podemos usá-los para vermos todos os elementos de um vetor.  -->
+
+<!-- Contudo, sua funções não param aí, sendo possível fazermos coisas ainda mais legais com eles, e é sobre isso que irei falar hoje, vamos lá? -->
+
+<p><!-- usando os iteradores como métodos do objeto <span style="color:#ff6600;"><code>Integer</code></span>, a classe que representa os números inteiros em Ruby. --></p>
+
+<h2>Diferença entre Loops e Iteradores</h2>
+<p>Antes de mais nada, é importante que você entenda a diferença entre Loops e Iteradores. Ainda que os dois pareçam coisas iguais, eles não são.</p>
+
+<p>No Ruby, um <strong>loop</strong> é um conjunto de código que deve ser repetido até que uma condição de parada seja encontrada, ou seja, quando um número for menor que outro por exemplo. Programadores lidam com loops diarimente, alguns exemplos são os loops <span style="color:#ff6600;"><code>while</code></span> e <span style="color:#ff6600;"><code>for</code></span>.</p>
+
+<p>Já os iteradores são <strong>métodos</strong> que permitem a você percorrer (iterar) um conjunto de dados, acessando potencialmente todos os seus elementos.</p>
+
+<h2>Loops</h2>
+<p>Bastante conhecidos, os loops nos ajudam a repetir um código até quando nós quisermos, pedindo sempre uma condição de parada para serem finalizados.</p>
+
+<p>Sendo uma linguagem completa, o Ruby não só apresenta os loops mais conhecidos no mundo da programação, assim como alguns especiais. São eles:</p>
+
+<h3>Loop</h3>
+<p>Claro como o próprio nome, o <span style="color:#ff6600;"><code>loop</code></span> é responsável por executar um pedaço de código <em>N</em> vezes, precisando de um critério de parada <span style="color:#ff6600;"><code>break</code></span>, explícito, já que esse nos leva ao infinito simplesmente porque quer.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kp">loop</span> <span class="k">do</span>
+  <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="nb">puts</span> <span class="n">x</span>
+  <span class="k">break</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">5</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+2
+3
+4
+5
+</code></pre></div></div>
+
+<p>Note que ele não informa variável ao bloco, e é porque não tem mesmo! Faça o teste e veja:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="kp">loop</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="nb">p</span> <span class="n">i</span>
+  <span class="n">x</span> <span class="o">+=</span> <span class="mi">1</span>
+  <span class="k">break</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3>For</h3>
+<p><em>Ah! Mas e o for? O Ruby não tem for??</em> Calma, calma! Temos <span style="color:#ff6600;"><code>for</code></span> em Ruby, mas com uma reviravolta: oor ser basicamente um <span style="color:#ff6600;"><code>each</code></span>, sempre que o Ruby percebe o uso de um <span style="color:#ff6600;"><code>for</code></span>, ele coloca um <span style="color:#ff6600;"><code>each</code></span> no lugar.</p>
+
+<p>Por isso, sempre que for em usar um <span style="color:#ff6600;"><code>for</code></span> (<em>bah dum tss</em>), avalie se o <span style="color:#ff6600;"><code>each</code></span> não seria o mais indicado.</p>
+
+<p>Contudo, todavia, entretado, pelo bem da documentação, vou colocá-lo aqui, OK?!</p>
+
+<p>Expectativa:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="p">[</span><span class="s1">'fee'</span><span class="p">,</span> <span class="s1">'fi'</span><span class="p">,</span> <span class="s1">'fo'</span><span class="p">,</span> <span class="s1">'fum'</span><span class="p">]</span>
+  <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="s2">" "</span>
+<span class="k">end</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="k">in</span> <span class="mi">1</span><span class="o">..</span><span class="mi">3</span>
+  <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="s2">" "</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Realidade:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span><span class="s1">'fee'</span><span class="p">,</span> <span class="s1">'fi'</span><span class="p">,</span> <span class="s1">'fo'</span><span class="p">,</span> <span class="s1">'fum'</span><span class="p">].</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="s2">" "</span>
+<span class="k">end</span>
+
+<span class="p">(</span><span class="mi">1</span><span class="o">..</span><span class="mi">3</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+  <span class="nb">print</span> <span class="n">i</span><span class="p">,</span> <span class="s2">" "</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>fee fi fo fum 1 2 3
+</code></pre></div></div>
+
+<h3>While</h3>
+<p>Já conhecido, o <span style="color:#ff6600;"><code>while</code></span> faz algo *enquanto* sua condição é satisfeita.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">y</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="n">y</span> <span class="o">&lt;=</span> <span class="mi">10</span>
+  <span class="nb">puts</span> <span class="n">y</span>
+  <span class="n">y</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+</code></pre></div></div>
+
+<p>O <span style="color:#ff6600;"><code>while</code></span> como todos os outros loops, aceita o uso do <span style="color:#ff6600;"><code>break</code></span>, porém atenção - você não pode não precisar dele se fizer uma <strong>boa lógica </strong>de loop.</p>
+
+<h3>UNTIL</h3>
+<p>Finalmente temos o <span style="color:#ff6600;"><code>until</code></span>, mais um diferencial do Ruby. Também, claro como a luz do sol, o <span style="color:#ff6600;"><code>until</code></span> executa um conjunto de comando <strong>até que</strong> sua condição seja satisfeita – sendo, então, o contrário do <span style="color:#ff6600;"><code>while</code></span>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">until</span> <span class="n">a</span> <span class="o">&gt;=</span> <span class="mi">10</span>
+  <span class="nb">puts</span> <span class="n">a</span>
+  <span class="n">a</span> <span class="o">+=</span> <span class="mi">1</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1
+2
+3
+4
+5
+6
+7
+8
+9 
+</code></pre></div></div>
+
+<hr />
+
+<h2>Iteradores</h2>
+<p>Possivelmente não tão conhecidos, os iteradores procuram facilitar a vida o programador que deseja percorrer objetos acessando potencialmente todos os seus elementos.</p>
+
+<!-- Com isso, sendo o Ruby a linguagem linda que é, essa oferece diversos tipos de iteradores que facilitam muito a vida do programador na hora de codificar um programa.  -->
+
+<p>No post sobre blocos vimos alguns deles como o <span style="color:#ff6600;"><code>each</code></span> e o <span style="color:#ff6600;"><code>map</code></span>, por exemplo. Porém, por serem métodos é possível esses sejam usados com outros tipos de objetos:</p>
+
+<h3>Times</h3>
+<p>Método da classe <span style="color:#ff6600;"><code>Integer</code></span>, o times permite que façamos algo
+  <em>N</em> vezes.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">3</span><span class="p">.</span><span class="nf">times</span> <span class="k">do</span>
+  <span class="nb">print</span> <span class="s1">'Ho! '</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  Ho! Ho! Ho!
+</code></pre></div></div>
+
+<h3>Upto</h3>
+<p>Já o <span style="color:#ff6600;"><code>upto</code></span>, como o próprio nome diz, vai até um determinado
+  número, permitindo, ao contrário do <span style="color:#ff6600;"><code>times</code></span>, que o valor atual seja utilizado dentro do bloco.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">0</span><span class="p">.</span><span class="nf">upto</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+  <span class="nb">print</span> <span class="n">x</span><span class="p">,</span> <span class="s2">" "</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 1 2 3 4 5 6 7 8 9
+</code></pre></div></div>
+
+<h3>Downto</h3>
+<p>Contrário ao <span style="color:#ff6600;"><code>upto</code></span>,  <span style="color:#ff6600;"><code>downto</code></span> faz o caminho reverso, contanto os números de cima para baixo.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">9</span><span class="p">.</span><span class="nf">downto</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="k">do</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span>
+  <span class="nb">print</span> <span class="n">x</span><span class="p">,</span> <span class="s2">" "</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>9 8 7 6 5 4 3 2 1 0
+</code></pre></div></div>
+
+<h3>Step</h3>
+
+<p>O <span style="color:#ff6600;"><code>step</code></span> itera até um determinado número (inclusive), pulando <em>N</em> números.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mi">0</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="p">{</span> <span class="o">|</span><span class="n">x</span><span class="o">|</span> <span class="nb">print</span> <span class="n">x</span><span class="p">,</span> <span class="s2">" "</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0 3 6 9 12
+</code></pre></div></div>
+
+<p>Cara, o Ruby é uma linguagem muito do povo, fala sério. &lt;3</p>
+
+<h3>Each</h3>
+<p>Já apresentado um monte de vezes no blog, o <span style="color:#ff6600;"><code>each</code></span> nos permite iterar sobre estruturas que dão suporte ao método e que dessa forma podem aproveitar das maravilhas do módulo <a href="https://ruby-doc.org/core-2.4.1/Enumerable.html" target="_blank">Enumerable</a>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">5</span> <span class="p">].</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">val</span><span class="o">|</span> <span class="nb">print</span> <span class="n">val</span><span class="p">,</span> <span class="s2">" "</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>Saída:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 1 2 3 5
+</code></pre></div></div>
+
+<hr />
+
+<p style="text-align:center;">Então, ficou faltando algo? Pode me falar nos comentários!</p>
+<p style="text-align:right;"><strong><em>Até o próximo post!</em></strong></p>
+<p><img class=" size-full wp-image-2141 aligncenter" src="/assets/iteradores.png" alt="iteradores" width="735" height="550" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#down" class="page__taxonomy-item" rel="tag">down</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#for" class="page__taxonomy-item" rel="tag">for</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#loop" class="page__taxonomy-item" rel="tag">loop</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#step" class="page__taxonomy-item" rel="tag">step</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#times" class="page__taxonomy-item" rel="tag">times</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#to" class="page__taxonomy-item" rel="tag">to</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#up" class="page__taxonomy-item" rel="tag">up</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#ruby" class="page__taxonomy-item" rel="tag">ruby</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2017-09-28T18:00:24-03:00">September 28, 2017</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Tudo+o+que+voc%C3%AA+precisa+saber+sobre+loops+e+iteradores+em+Ruby%21%20http%3A%2F%2Flocalhost%3A4000%2Fruby%2Floops-iteradores%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fruby%2Floops-iteradores%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fruby%2Floops-iteradores%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/ruby/p-puts-print-inspect/" class="pagination--pager" title="Qual a diferença entre p, puts e print? #funTip
+">Previous</a>
+    
+    
+      <a href="/ruby/english-version/english-loops-iteradores/" class="pagination--pager" title="Tudo o que você precisa saber sobre loops e iteradores em Ruby!
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You May Also Enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ruby/procedures-proc-ruby/" rel="permalink">Ruby Proc: O que é e como usar?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Oi, como vai?
+
+Hoje falarei sobre as procs, também conhecidas como procedures do Ruby.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ruby/irb/" rel="permalink">Interactive Ruby Shell (IRB)
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Oi, turobom?
+Hoje quero falar sobre o IRB, sigla para Interactive Ruby Shell.
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ruby/heran%C3%A7a-objetos-classe/" rel="permalink">Tudo sobre herança e seus conceitos em Ruby!
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Hoje vamos falar de herança.
+O conceito de herança se aplica quando nos perguntamos se um objeto é um subtipo de outro, ou seja, um cachorro é um
+  animal, m...</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/ruby/blocks-em-ruby/" rel="permalink">Ruby Blocks: O que são e como usar?
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Bem, o que são os blocos?
+    Eles não são objetos ...
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+      
+        
+          <li><a href="https://github.com/ceciliassis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+          <li><a href="https://linkedin.com/in/ceciliassis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> Linkedin</a></li>
+        
+      
+        
+          <li><a href="https://instagram.com/aceciliassis" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i> Instagram</a></li>
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2020 Cecília Assis. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+
+  </body>
+</html>
