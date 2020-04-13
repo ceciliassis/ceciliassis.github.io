@@ -23,7 +23,7 @@ keywords: machine learning, ruby, python
 github_username: ceciliassis
 minimal_mistakes_skin: default
 search: true
-# repository: ceciliassis/ceciliassis.github.io
+repository: ceciliassis/ceciliassis.github.io
 
 # Build settings
 markdown: kramdown
