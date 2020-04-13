@@ -128,3 +128,8 @@ analytics:
   google:
     tracking_id: 'G-1P0HRYT5ZL'
     anonymize_ip: false # default
+
+# google:
+#   search_engine_id: YOUR_SEARCH_ENGINE_ID
+
+google_site_verification: JrcXAfsGUSKkfvwADPJ8fPUgIQ_FEeq-HOKRAoaQERo
