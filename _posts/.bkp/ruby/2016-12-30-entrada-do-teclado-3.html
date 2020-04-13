@@ -1,83 +1,88 @@
 ---
 layout: post
-title: Input/Entrada do teclado <3
-date: 2016-12-30 17:00:39.000000000 -02:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
-categories:
-- Ruby
-tags: []
-meta:
-  _rest_api_client_id: "-1"
-  _rest_api_published: '1'
-  _wpcom_is_markdown: '1'
-  _publicize_job_id: '242974420'
-  _publicize_done_external: a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154697589803280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/814950277170204672";}}
-  _publicize_done_16115497: '1'
-  _wpas_done_15941414: '1'
-  _publicize_done_16115499: '1'
-  _wpas_done_15941419: '1'
-  publicize_twitter_user: meRubyGirl
-  _wp_old_slug: inputentrada-do-teclado-3
-  _thumbnail_id: '1678'
-author:
-  login: merubygirl
-  email: cyassis@gmail.com
-  display_name: Me, Ruby Girl.
-  first_name: ''
-  last_name: ''
-permalink: "/2016/12/30/entrada-do-teclado-3/"
----
-<p><strong><em>Hey, como vai!?</em></strong></p>
-<p>Finalmente vamos abordar um tópico suuuuuper importante: Entrada do teclado.</p>
-<p>Bem, o Ruby faz isso de forma muito simples e pelos meus estudos, somente com um método: <span style="color:#ff6600;"><code>gets</code></span> facilmente recordado por aqueles que um dia programaram em <strong>C</strong>, <strong>C++</strong> e talvez outras?</p>
-<p>Falaremos então do gets e alguns de seus parceiros que muito nos ajudam na conversão de tipos e afins. Logo, vamos aos exemplos ... shall we?</p>
-<hr />
-<p style="text-align:center;"><strong>Gets</strong></p>
-<p>Este método pertence a classe String e é um objeto deste tipo que retorna.</p>
-<p>[code lang="ruby"]<br />
-print 'Digite o seu nome: '<br />
-nome = gets<br />
-puts 'Seu nome é: ' + nome + ' Como vai?'<br />
-[/code]</p>
-<p>A saída desse código será:</p>
-<blockquote><p>Seu nome é: Bete<br />
-Como vai?</p></blockquote>
-<p>Como pudemos perceber, uma <span style="color:#ff6600;"><code>\n</code></span> (<em>new line</em>) foi colocado ao fim da entrada do teclado, isso é resolvido com os métodos <span style="color:#ff6600;"><code>chomp</code></span> e <span style="color:#ff6600;"><code>strip</code></span>.</p>
-<hr />
-<p style="text-align:center;"><strong>Chomp</strong></p>
-<p>Remove <span style="color:#ff6600;"><code>\n</code></span>, <span style="color:#ff6600;"><code>\r</code></span> e <span style="color:#ff6600;"><code>\r\n</code></span> do final de strings, os caracteres carriage return. Aceita um parâmetro que indicará qual separador será usado, se nenhum for estipulado, o padrão será usado.</p>
-<p><img class="  wp-image-549 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-24-47.png" alt="screenshot-from-2016-12-27-03-24-47" width="498" height="202" /></p>
-<p>Tem enquanto retorno uma string modificada com os caracteres especiais removidos. Aceita o operador <span style="color:#ff6600;"><code>!</code></span> que possibilita a alteração do objeto e não o retorno de uma cópia dele.</p>
-<p>Dito isso, o código anterior utilizando chomp ficaria assim:</p>
-<p>[code lang="ruby"]<br />
-print 'Digite o seu nome: '<br />
-nome = gets.chomp<br />
-puts 'Seu nome é: ' + nome + ' Como vai?'<br />
-[/code]</p>
-<p>Saída:</p>
-<blockquote><p>Seu nome é: Bete Como vai?</p></blockquote>
-<hr />
-<p style="text-align:center;"><strong>Strip</strong></p>
-<p>Enquanto o <span style="color:#ff6600;"><code>chomp</code></span> remove somente os caracteres especiais no fim da string, o <span style="color:#ff6600;"><code>strip</code></span> também remove os iniciais. Ele define enquanto espaços em branco: null, tab, espaços, dentre outros. Pode ser usado com o operador <span style="color:#ff6600;"><code>!</code></span> também.</p>
-<p><img class="  wp-image-568 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-35-15.png?w=680" alt="screenshot-from-2016-12-27-03-35-15" width="539" height="84" /></p>
-<hr />
-<p style="text-align:center;"><span style="color:#008000;"><strong>BÔNUS TIME!!</strong></span></p>
-<p>O método gets retorna uma string, e sabemos que elas podem ser convertidas para outros tipos e aqui estão alguns dos métodos que nos ajudam com isso:</p>
-<hr />
-<p style="text-align:center;"><strong>TO_I</strong></p>
-<p>Converte string para inteiro, removendo caracteres especiais, <strong>localizados no final da string</strong>. Pode receber enquanto parâmetro a base (<em>entre 2 e 36</em>) que será usada para conversão, por padrão é utilizada base 10.</p>
-<p><img class="  wp-image-575 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-40-14.png?w=680" alt="screenshot-from-2016-12-27-03-40-14" width="512" height="212" /></p>
-<p>Se nenhum número for encontrado na string, retorna 0 (<em>zero</em>).</p>
-<hr />
-<p style="text-align:center;"><strong>TO_F</strong></p>
-<p>Converte string para float,removendo caracteres especiais, <strong>localizados no final da string</strong>. Não aceita parâmetros.</p>
-<p><img class="  wp-image-587 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-40-28.png?w=680" alt="screenshot-from-2016-12-27-03-40-28" width="509" height="83" /></p>
-<hr />
-<p>Com tudo isso, pudemos perceber que o Ruby muitas ferramentas traz em nosso favor. Existem uma infinidade de outros métodos com esse intuito e a eles vocês devem procurar.</p>
-<p>Acredito que por hoje é só pessoal. Não deixem de escrever suas dúvidas e sugestões, me encontro a disposição.</p>
-<h6>A fonte para tais informações foi trazida pelos sites: <a href="https://blog.udemy.com/ruby-chomp/" target="_blank">Ruby, Chomp</a>, <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-chomp" target="_blank">Method Chomp</a>, <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-strip" target="_blank">Method Strip</a>, <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-to_i" target="_blank">Method to_i</a>.</h6>
-<p style="text-align:right;"><strong><em>Até mais!</em></strong></p>
+title: Input/Entrada do teclado <3 date: 2016-12-30 17:00:39.000000000 -02:00 type: post parent_id: '0' published: true
+  password: '' status: publish categories: - Ruby tags: [] meta: _rest_api_client_id: "-1" _rest_api_published: '1'
+  _wpcom_is_markdown: '1' _publicize_job_id: '242974420' _publicize_done_external:
+  a:2:{s:8:"facebook";a:1:{i:15941414;s:38:"https://facebook.com/10154697589803280";}s:7:"twitter";a:1:{i:15941419;s:56:"https://twitter.com/meRubyGirl/status/814950277170204672";}}
+  _publicize_done_16115497: '1' _wpas_done_15941414: '1' _publicize_done_16115499: '1' _wpas_done_15941419: '1'
+  publicize_twitter_user: meRubyGirl _wp_old_slug: inputentrada-do-teclado-3 _thumbnail_id: '1678' author: login:
+  merubygirl email: cyassis@gmail.com display_name: Me, Ruby Girl. first_name: '' last_name: ''
+  permalink: "/2016/12/30/entrada-do-teclado-3/" --- <p><strong><em>Hey, como vai!?</em></strong></p>
+  <p>Finalmente vamos abordar um tópico suuuuuper importante: Entrada do teclado.</p>
+  <p>Bem, o Ruby faz isso de forma muito simples e pelos meus estudos, somente com um método: <span
+      style="color:#ff6600;"><code>gets</code></span> facilmente recordado por aqueles que um dia programaram em
+    <strong>C</strong>, <strong>C++</strong> e talvez outras?</p>
+  <p>Falaremos então do gets e alguns de seus parceiros que muito nos ajudam na conversão de tipos e afins. Logo, vamos
+    aos exemplos ... shall we?</p>
+  <hr />
+  <p style="text-align:center;"><strong>Gets</strong></p>
+  <p>Este método pertence a classe String e é um objeto deste tipo que retorna.</p>
+  <p>[code lang="ruby"]<br />
+    print 'Digite o seu nome: '<br />
+    nome = gets<br />
+    puts 'Seu nome é: ' + nome + ' Como vai?'<br />
+    [/code]</p>
+  <p>A saída desse código será:</p>
+  <blockquote>
+    <p>Seu nome é: Bete<br />
+      Como vai?</p>
+  </blockquote>
+  <p>Como pudemos perceber, uma <span style="color:#ff6600;"><code>\n</code></span> (<em>new line</em>) foi colocado ao
+    fim da entrada do teclado, isso é resolvido com os métodos <span style="color:#ff6600;"><code>chomp</code></span> e
+    <span style="color:#ff6600;"><code>strip</code></span>.</p>
+  <hr />
+  <p style="text-align:center;"><strong>Chomp</strong></p>
+  <p>Remove <span style="color:#ff6600;"><code>\n</code></span>, <span style="color:#ff6600;"><code>\r</code></span> e
+    <span style="color:#ff6600;"><code>\r\n</code></span> do final de strings, os caracteres carriage return. Aceita um
+    parâmetro que indicará qual separador será usado, se nenhum for estipulado, o padrão será usado.</p>
+  <p><img class="  wp-image-549 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-24-47.png"
+      alt="screenshot-from-2016-12-27-03-24-47" width="498" height="202" /></p>
+  <p>Tem enquanto retorno uma string modificada com os caracteres especiais removidos. Aceita o operador <span
+      style="color:#ff6600;"><code>!</code></span> que possibilita a alteração do objeto e não o retorno de uma cópia
+    dele.</p>
+  <p>Dito isso, o código anterior utilizando chomp ficaria assim:</p>
+  <p>[code lang="ruby"]<br />
+    print 'Digite o seu nome: '<br />
+    nome = gets.chomp<br />
+    puts 'Seu nome é: ' + nome + ' Como vai?'<br />
+    [/code]</p>
+  <p>Saída:</p>
+  <blockquote>
+    <p>Seu nome é: Bete Como vai?</p>
+  </blockquote>
+  <hr />
+  <p style="text-align:center;"><strong>Strip</strong></p>
+  <p>Enquanto o <span style="color:#ff6600;"><code>chomp</code></span> remove somente os caracteres especiais no fim da
+    string, o <span style="color:#ff6600;"><code>strip</code></span> também remove os iniciais. Ele define enquanto
+    espaços em branco: null, tab, espaços, dentre outros. Pode ser usado com o operador <span
+      style="color:#ff6600;"><code>!</code></span> também.</p>
+  <p><img class="  wp-image-568 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-35-15.png"
+      alt="screenshot-from-2016-12-27-03-35-15" width="539" height="84" /></p>
+  <hr />
+  <p style="text-align:center;"><span style="color:#008000;"><strong>BÔNUS TIME!!</strong></span></p>
+  <p>O método gets retorna uma string, e sabemos que elas podem ser convertidas para outros tipos e aqui estão alguns
+    dos métodos que nos ajudam com isso:</p>
+  <hr />
+  <p style="text-align:center;"><strong>TO_I</strong></p>
+  <p>Converte string para inteiro, removendo caracteres especiais, <strong>localizados no final da string</strong>. Pode
+    receber enquanto parâmetro a base (<em>entre 2 e 36</em>) que será usada para conversão, por padrão é utilizada base
+    10.</p>
+  <p><img class="  wp-image-575 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-40-14.png"
+      alt="screenshot-from-2016-12-27-03-40-14" width="512" height="212" /></p>
+  <p>Se nenhum número for encontrado na string, retorna 0 (<em>zero</em>).</p>
+  <hr />
+  <p style="text-align:center;"><strong>TO_F</strong></p>
+  <p>Converte string para float,removendo caracteres especiais, <strong>localizados no final da string</strong>. Não
+    aceita parâmetros.</p>
+  <p><img class="  wp-image-587 aligncenter" src="{{ site.baseurl }}/assets/screenshot-from-2016-12-27-03-40-28.png"
+      alt="screenshot-from-2016-12-27-03-40-28" width="509" height="83" /></p>
+  <hr />
+  <p>Com tudo isso, pudemos perceber que o Ruby muitas ferramentas traz em nosso favor. Existem uma infinidade de outros
+    métodos com esse intuito e a eles vocês devem procurar.</p>
+  <p>Acredito que por hoje é só pessoal. Não deixem de escrever suas dúvidas e sugestões, me encontro a disposição.</p>
+  <h6>A fonte para tais informações foi trazida pelos sites: <a href="https://blog.udemy.com/ruby-chomp/"
+      target="_blank">Ruby, Chomp</a>, <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-chomp"
+      target="_blank">Method Chomp</a>, <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-strip"
+      target="_blank">Method Strip</a>, <a href="http://ruby-doc.org/core-2.4.0/String.html#method-i-to_i"
+      target="_blank">Method to_i</a>.</h6>
+  <p style="text-align:right;"><strong><em>Até mais!</em></strong></p>
