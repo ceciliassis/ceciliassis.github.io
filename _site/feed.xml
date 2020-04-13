@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-12T23:53:23-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cecília Assis</title><subtitle>Cecília Assis' personal website + blog that ensembles everything that is meanfingful to her. Focuses on Machine Learning, Ruby, Python and Finances.</subtitle><author><name>Cecília Assis</name></author><entry><title type="html">Ruby Proc: O que é e como usar?</title><link href="http://localhost:4000/ruby/procedures-proc-ruby/" rel="alternate" type="text/html" title="Ruby Proc: O que é e como usar?" /><published>2018-04-13T18:00:52-03:00</published><updated>2018-04-13T18:00:52-03:00</updated><id>http://localhost:4000/ruby/procedures-proc-ruby</id><content type="html" xml:base="http://localhost:4000/ruby/procedures-proc-ruby/">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Oi, como vai?&lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2020-04-12T23:58:09-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Cecília Assis</title><subtitle>Cecília Assis' personal website + blog that ensembles everything that is meanfingful to her. Focuses on Machine Learning, Ruby, Python and Finances.</subtitle><author><name>Cecília Assis</name></author><entry><title type="html">Ruby Proc: O que é e como usar?</title><link href="http://localhost:4000/ruby/procedures-proc-ruby/" rel="alternate" type="text/html" title="Ruby Proc: O que é e como usar?" /><published>2018-04-13T18:00:52-03:00</published><updated>2018-04-13T18:00:52-03:00</updated><id>http://localhost:4000/ruby/procedures-proc-ruby</id><content type="html" xml:base="http://localhost:4000/ruby/procedures-proc-ruby/">&lt;p&gt;&lt;em&gt;&lt;strong&gt;Oi, como vai?&lt;br /&gt;
 &lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Hoje falarei sobre as &lt;span style=&quot;color:#ff6600; &quot;&gt;&lt;code&gt;procs&lt;/code&gt;&lt;/span&gt;, também conhecidas como &lt;span style=&quot;color:#ff6600; &quot;&gt;&lt;code&gt;procedures&lt;/code&gt;&lt;/span&gt; do Ruby.&lt;/p&gt;
 
@@ -416,93 +416,75 @@ fib_up_to(1000) {|f| print f, &quot; &quot; }
 &lt;p style=&quot;text-align:right;&quot;&gt;&lt;em&gt;&lt;strong&gt;Te espero no próximo post (:&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img class=&quot; size-full wp-image-2221 aligncenter&quot; src=&quot;/assets/blocks.png&quot; alt=&quot;blocks&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="block" /><category term="blocks" /><category term="yield" /><summary type="html">Bem, o que são os blocos? Eles não são objetos ...</summary></entry><entry><title type="html">Como criar vetores usando “range” em Ruby #funTip</title><link href="http://localhost:4000/ruby/popular-vetor-range/" rel="alternate" type="text/html" title="Como criar vetores usando &quot;range&quot; em Ruby #funTip" /><published>2017-11-21T11:45:52-02:00</published><updated>2017-11-21T11:45:52-02:00</updated><id>http://localhost:4000/ruby/popular-vetor-range</id><content type="html" xml:base="http://localhost:4000/ruby/popular-vetor-range/">&lt;p&gt;Quantas vezes programando você se deparou com a necessidade de criar um array populado com vários números?&lt;/p&gt;
 
-
 &lt;p&gt;Bem, isso sempre acontece comigo! E o Ruby, muito legal que é, soluciona isso rapidamente com os &lt;em&gt;Ranges&lt;/em&gt;:&lt;/p&gt;
 
-```ruby
-arr = Array(1..5)
-p arr
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-  [1, 2, 3, 4, 5]
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  [1, 2, 3, 4, 5]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Viu como é que fácil?&lt;/p&gt;
 &lt;p&gt;Usamos o construtor da classe com o range que queremos e está tudo pronto!&lt;/p&gt;
 
-```ruby
-arr = Array('a'..'e')
-p arr
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;d&quot;, &quot;e&quot;]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;O seguinte código também funciona:&lt;/p&gt;
 
-```ruby
-arr = ('a'..'e').to_a
-p arr
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'e'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_a&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;arr&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Pois usa o método &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;to_a&lt;/code&gt;&lt;/span&gt;: &lt;em&gt;to array&lt;/em&gt;, mas eu acho o uso do
   construtor mais intuitivo e você?&lt;/p&gt;
 &lt;p style=&quot;text-align:right;&quot;&gt;&lt;strong&gt;Vamos lá! Brinque um pouco e deixa essa brincadeira nos comentários!&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot; size-full wp-image-2218 aligncenter&quot; src=&quot;{{ site.baseurl }}/assets/array_range.png&quot; alt=&quot;array_range&quot;
-    width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="array" /><category term="funTip" /><category term="new" /><category term="ranges" /><summary type="html">Quantas vezes programando você se deparou com a necessidade de criar um array populado com vários números?</summary></entry><entry><title type="html">Qual a diferença entre `each.with_index` e `each_with_index` ? #funTip</title><link href="http://localhost:4000/ruby/each-with-index/" rel="alternate" type="text/html" title="Qual a diferença entre `each.with_index` e `each_with_index` ? #funTip" /><published>2017-11-14T11:45:36-02:00</published><updated>2017-11-14T11:45:36-02:00</updated><id>http://localhost:4000/ruby/each-with-index</id><content type="html" xml:base="http://localhost:4000/ruby/each-with-index/">Já se perguntou qual a diferença entre `each.with_index` e `each_with_index`, esse post vem para te ajudar a responder essa pergunta!
+&lt;p&gt;&lt;img class=&quot; size-full wp-image-2218 aligncenter&quot; src=&quot;/assets/array_range.png&quot; alt=&quot;array_range&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="array" /><category term="funTip" /><category term="new" /><category term="ranges" /><summary type="html">Quantas vezes programando você se deparou com a necessidade de criar um array populado com vários números?</summary></entry><entry><title type="html">Qual a diferença entre `each.with_index` e `each_with_index` ? #funTip</title><link href="http://localhost:4000/ruby/each-with-index/" rel="alternate" type="text/html" title="Qual a diferença entre `each.with_index` e `each_with_index` ? #funTip" /><published>2017-11-14T11:45:36-02:00</published><updated>2017-11-14T11:45:36-02:00</updated><id>http://localhost:4000/ruby/each-with-index</id><content type="html" xml:base="http://localhost:4000/ruby/each-with-index/">&lt;p&gt;Já se perguntou qual a diferença entre &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each.with_index&lt;/code&gt; e &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each_with_index&lt;/code&gt;, esse post vem para te ajudar a responder essa pergunta!&lt;/p&gt;
 
+&lt;p&gt;O Ruby apresenta duas formas de iterarmos sobre &lt;a href=&quot;https://ruby-doc.org/core-2.4.1/Enumerable.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;objetos&lt;/a&gt; quando queremos acesso aos seus índices: o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each_with_index&lt;/code&gt;&lt;/span&gt; o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each.with_index&lt;/code&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Mas qual a diferença entre os dois?&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;O Ruby apresenta duas formas de iterarmos sobre &lt;a href=&quot;https://ruby-doc.org/core-2.4.1/Enumerable.html&quot;
-    target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;objetos&lt;/a&gt; quando queremos acesso aos seus índices: o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each_with_index&lt;/code&gt;&lt;/span&gt; o &lt;span
-    style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each.with_index&lt;/code&gt;&lt;/span&gt;&lt;/p&gt; &lt;strong&gt;Mas qual a diferença entre os dois?&lt;/strong&gt;
+&lt;p&gt;Pois bem, a grande sacada está no ponto! Isso mesmo!&lt;/p&gt;
 
-Pois bem, a grande sacada está no ponto! Isso mesmo! 
-
-Sendo o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each.with_index&lt;/code&gt;&lt;/span&gt; um método que extende a funcionalidade do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt;, esse aceita um deslocamento (*offset*) que é somado ao índice original, ou seja, um pequeno ponto de começo para representar os seus números. Já o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each_with_index&lt;/code&gt;&lt;/span&gt; não permite esse argumento.
+&lt;p&gt;Sendo o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each.with_index&lt;/code&gt;&lt;/span&gt; um método que extende a funcionalidade do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt;, esse aceita um deslocamento (&lt;em&gt;offset&lt;/em&gt;) que é somado ao índice original, ou seja, um pequeno ponto de começo para representar os seus números. Já o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each_with_index&lt;/code&gt;&lt;/span&gt; não permite esse argumento.&lt;/p&gt;
 
 &lt;p&gt;Veja:&lt;/p&gt;
 
-```ruby
-[:foo, :bar, :baz].each.with_index(2) do |value, index|
-  puts &quot;#{index}: #{value}&quot;
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:baz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;with_index&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-
-```ruby
-[:foo, :bar, :baz].each_with_index do |value, index|
-  puts &quot;#{index}: #{value}&quot;
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:foo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:bar&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:baz&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each_with_index&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;index&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-2: foo
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;2: foo
 3: bar
 4: baz
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-
-```
-0: foo
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0: foo
 1: bar
 2: baz
-```
-
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Simples, mas ajuda.&lt;/p&gt;
 
 &lt;h5&gt;Thanks to https://stackoverflow.com/a/20258160&lt;/h5&gt;
-&lt;p&gt;&lt;img src=&quot;{{ site.baseurl }}/assets/each_with_index1.png&quot; alt=&quot;each_with_index&quot; width=&quot;735&quot; height=&quot;550&quot;
-    class=&quot;alignnone size-full wp-image-2210&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="each" /><category term="index" /><category term="with" /><category term="funtip" /><summary type="html">Já se perguntou qual a diferença entre each.with_index e each_with_index, esse post vem para te ajudar a responder essa pergunta!</summary></entry><entry><title type="html">Qual a diferença entre `sprintf`, `format` e `printf` ? #funTip</title><link href="http://localhost:4000/ruby/sprintf-format-printf/" rel="alternate" type="text/html" title="Qual a diferença entre `sprintf`, `format` e `printf` ? #funTip" /><published>2017-11-07T11:45:52-02:00</published><updated>2017-11-07T11:45:52-02:00</updated><id>http://localhost:4000/ruby/sprintf-format-printf</id><content type="html" xml:base="http://localhost:4000/ruby/sprintf-format-printf/">&lt;p&gt;Hoje vou te explicar a diferença entre &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;printf&lt;/code&gt;&lt;/span&gt;, &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;sprintf&lt;/code&gt;&lt;/span&gt; e &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/span&gt;. Simbora?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/each_with_index1.png&quot; alt=&quot;each_with_index&quot; width=&quot;735&quot; height=&quot;550&quot; class=&quot;alignnone size-full wp-image-2210&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="each" /><category term="index" /><category term="with" /><category term="funtip" /><summary type="html">Já se perguntou qual a diferença entre each.with_index e each_with_index, esse post vem para te ajudar a responder essa pergunta!</summary></entry><entry><title type="html">Qual a diferença entre `sprintf`, `format` e `printf` ? #funTip</title><link href="http://localhost:4000/ruby/sprintf-format-printf/" rel="alternate" type="text/html" title="Qual a diferença entre `sprintf`, `format` e `printf` ? #funTip" /><published>2017-11-07T11:45:52-02:00</published><updated>2017-11-07T11:45:52-02:00</updated><id>http://localhost:4000/ruby/sprintf-format-printf</id><content type="html" xml:base="http://localhost:4000/ruby/sprintf-format-printf/">&lt;p&gt;Hoje vou te explicar a diferença entre &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;printf&lt;/code&gt;&lt;/span&gt;, &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;sprintf&lt;/code&gt;&lt;/span&gt; e &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;format&lt;/code&gt;&lt;/span&gt;. Simbora?&lt;/p&gt;
 
 &lt;h1&gt;Format e Sprintf&lt;/h1&gt;
 &lt;p&gt;Pois bem, o que a documentação do Ruby - um dos &lt;ins&gt;amores&lt;/ins&gt; da minha vida - &lt;a href=&quot;https://ruby-doc.org/core-2.4.2/Kernel.html#method-i-sprintf&quot;&gt;fala&lt;/a&gt; é o seguinte:&lt;/p&gt;
@@ -578,114 +560,104 @@ String usando o método sprintf: 00123
 &lt;h5&gt;Thanks to: https://www.theurbanpenguin.com/ruby-using-sprintf-and-printf-to-format-strings/&lt;/h5&gt;
 &lt;p&gt;&lt;img class=&quot; size-full wp-image-2204 aligncenter&quot; src=&quot;/assets/sprintf_printf_format.png&quot; alt=&quot;sprintf_printf_format&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;
 &lt;p&gt; &lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="funtip" /><category term="format" /><category term="printf" /><category term="sprintf" /><category term="string" /><summary type="html">Hoje vou te explicar a diferença entre printf, sprintf e format. Simbora?</summary></entry><entry><title type="html">Tudo o que você precisa saber sobre loops e iteradores em Ruby!</title><link href="http://localhost:4000/ruby/loops-iteradores/" rel="alternate" type="text/html" title="Tudo o que você precisa saber sobre loops e iteradores em Ruby!" /><published>2017-09-28T18:00:24-03:00</published><updated>2017-09-28T18:00:24-03:00</updated><id>http://localhost:4000/ruby/loops-iteradores</id><content type="html" xml:base="http://localhost:4000/ruby/loops-iteradores/">&lt;p style=&quot;text-align:center;&quot;&gt;&lt;strong&gt;Oi, tudo bem com você?&lt;/strong&gt;&lt;/p&gt;
-Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?
+&lt;p&gt;Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?&lt;/p&gt;
 
-{: .notice}
-Read the &lt;a href=&quot;https://merubygirl.wordpress.com/2017/05/25/english-version-loops-1/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;ENGLISH VERSION&lt;/a&gt;.
+&lt;p class=&quot;notice&quot;&gt;Read the &lt;a href=&quot;https://merubygirl.wordpress.com/2017/05/25/english-version-loops-1/&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;&gt;ENGLISH VERSION&lt;/a&gt;.&lt;/p&gt;
 
 &lt;!-- No post sobre blocos, falamos rapidamente sobre iteradores e entendemos um pouquinho sobre como podemos usá-los para vermos todos os elementos de um vetor.  --&gt;
 
 &lt;!-- Contudo, sua funções não param aí, sendo possível fazermos coisas ainda mais legais com eles, e é sobre isso que irei falar hoje, vamos lá? --&gt;
 
- &lt;!-- usando os iteradores como métodos do objeto &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/span&gt;, a classe que representa os números inteiros em Ruby. --&gt;
+&lt;p&gt;&lt;!-- usando os iteradores como métodos do objeto &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/span&gt;, a classe que representa os números inteiros em Ruby. --&gt;&lt;/p&gt;
 
 &lt;h2&gt;Diferença entre Loops e Iteradores&lt;/h2&gt;
-Antes de mais nada, é importante que você entenda a diferença entre Loops e Iteradores. Ainda que os dois pareçam coisas iguais, eles não são.  
+&lt;p&gt;Antes de mais nada, é importante que você entenda a diferença entre Loops e Iteradores. Ainda que os dois pareçam coisas iguais, eles não são.&lt;/p&gt;
 
-No Ruby, um **loop** é um conjunto de código que deve ser repetido até que uma condição de parada seja encontrada, ou seja, quando um número for menor que outro por exemplo. Programadores lidam com loops diarimente, alguns exemplos são os loops &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/span&gt; e &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt;.
+&lt;p&gt;No Ruby, um &lt;strong&gt;loop&lt;/strong&gt; é um conjunto de código que deve ser repetido até que uma condição de parada seja encontrada, ou seja, quando um número for menor que outro por exemplo. Programadores lidam com loops diarimente, alguns exemplos são os loops &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/span&gt; e &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
 
-Já os iteradores são **métodos** que permitem a você percorrer (iterar) um conjunto de dados, acessando potencialmente todos os seus elementos. 
-
+&lt;p&gt;Já os iteradores são &lt;strong&gt;métodos&lt;/strong&gt; que permitem a você percorrer (iterar) um conjunto de dados, acessando potencialmente todos os seus elementos.&lt;/p&gt;
 
 &lt;h2&gt;Loops&lt;/h2&gt;
-Bastante conhecidos, os loops nos ajudam a repetir um código até quando nós quisermos, pedindo sempre uma condição de parada para serem finalizados. 
+&lt;p&gt;Bastante conhecidos, os loops nos ajudam a repetir um código até quando nós quisermos, pedindo sempre uma condição de parada para serem finalizados.&lt;/p&gt;
 
-Sendo uma linguagem completa, o Ruby não só apresenta os loops mais conhecidos no mundo da programação, assim como alguns especiais. São eles:
+&lt;p&gt;Sendo uma linguagem completa, o Ruby não só apresenta os loops mais conhecidos no mundo da programação, assim como alguns especiais. São eles:&lt;/p&gt;
 
 &lt;h3&gt;Loop&lt;/h3&gt;
-Claro como o próprio nome, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;loop&lt;/code&gt;&lt;/span&gt; é responsável por executar um pedaço de código *N* vezes, precisando de um critério de parada &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;break&lt;/code&gt;&lt;/span&gt;, explícito, já que esse nos leva ao infinito simplesmente porque quer.
+&lt;p&gt;Claro como o próprio nome, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;loop&lt;/code&gt;&lt;/span&gt; é responsável por executar um pedaço de código &lt;em&gt;N&lt;/em&gt; vezes, precisando de um critério de parada &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;break&lt;/code&gt;&lt;/span&gt;, explícito, já que esse nos leva ao infinito simplesmente porque quer.&lt;/p&gt;
 
-```ruby
-x = 0
-loop do
-  x += 1
-  puts x
-  break if x &gt;= 5
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
 2
 3
 4
 5
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Note que ele não informa variável ao bloco, e é porque não tem mesmo! Faça o teste e veja:&lt;/p&gt;
 
-```ruby
-x = 0
-loop do |i|
-  p i
-  x += 1
-  break if x &gt;= 10
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3&gt;For&lt;/h3&gt;
-&lt;em&gt;Ah! Mas e o for? O Ruby não tem for??&lt;/em&gt; Calma, calma! Temos &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt; em Ruby, mas com uma reviravolta: oor ser basicamente um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt;, sempre que o Ruby percebe o uso de um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt;, ele coloca um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; no lugar. 
+&lt;p&gt;&lt;em&gt;Ah! Mas e o for? O Ruby não tem for??&lt;/em&gt; Calma, calma! Temos &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt; em Ruby, mas com uma reviravolta: oor ser basicamente um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt;, sempre que o Ruby percebe o uso de um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt;, ele coloca um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; no lugar.&lt;/p&gt;
 
-Por isso, sempre que for em usar um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt; (*bah dum tss*), avalie se o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; não seria o mais indicado. 
-  
-Contudo, todavia, entretado, pelo bem da documentação, vou colocá-lo aqui, OK?!
+&lt;p&gt;Por isso, sempre que for em usar um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;for&lt;/code&gt;&lt;/span&gt; (&lt;em&gt;bah dum tss&lt;/em&gt;), avalie se o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; não seria o mais indicado.&lt;/p&gt;
+
+&lt;p&gt;Contudo, todavia, entretado, pelo bem da documentação, vou colocá-lo aqui, OK?!&lt;/p&gt;
 
 &lt;p&gt;Expectativa:&lt;/p&gt;
 
-```ruby
-for i in ['fee', 'fi', 'fo', 'fum']
-  print i, &quot; &quot;
-end
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fi'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fum'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-for i in 1..3
-  print i, &quot; &quot;
-end
-```
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Realidade:&lt;/p&gt;
 
-```ruby
-['fee', 'fi', 'fo', 'fum'].each do |i|
-  print i, &quot; &quot;
-end
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'fee'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fi'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fum'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
-(1..3).each do |i|
-  print i, &quot; &quot;
-end
-```
+&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-fee fi fo fum 1 2 3
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;fee fi fo fum 1 2 3
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3&gt;While&lt;/h3&gt;
 &lt;p&gt;Já conhecido, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/span&gt; faz algo *enquanto* sua condição é satisfeita.&lt;/p&gt;
 
-```ruby
-y = 1
-while y &lt;= 10
-  puts y
-  y += 1
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
-```
-1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
 2
 3
 4
@@ -695,24 +667,22 @@ end
 8
 9
 10
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;O &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/span&gt; como todos os outros loops, aceita o uso do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;break&lt;/code&gt;&lt;/span&gt;, porém atenção - você não pode não precisar dele se fizer uma &lt;strong&gt;boa lógica &lt;/strong&gt;de loop.&lt;/p&gt;
 
 &lt;h3&gt;UNTIL&lt;/h3&gt;
-Finalmente temos o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;until&lt;/code&gt;&lt;/span&gt;, mais um diferencial do Ruby. Também, claro como a luz do sol, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;until&lt;/code&gt;&lt;/span&gt; executa um conjunto de comando &lt;strong&gt;até que&lt;/strong&gt; sua condição seja satisfeita – sendo, então, o contrário do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/span&gt;.
+&lt;p&gt;Finalmente temos o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;until&lt;/code&gt;&lt;/span&gt;, mais um diferencial do Ruby. Também, claro como a luz do sol, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;until&lt;/code&gt;&lt;/span&gt; executa um conjunto de comando &lt;strong&gt;até que&lt;/strong&gt; sua condição seja satisfeita – sendo, então, o contrário do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;while&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
 
-```ruby
-a = 1
-until a &gt;= 10
-  puts a
-  a += 1
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;until&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
-```
-1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
 2
 3
 4
@@ -721,226 +691,201 @@ end
 7
 8
 9 
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
 
-
-
 &lt;h2&gt;Iteradores&lt;/h2&gt;
-Possivelmente não tão conhecidos, os iteradores procuram facilitar a vida o programador que deseja percorrer objetos acessando potencialmente todos os seus elementos. 
+&lt;p&gt;Possivelmente não tão conhecidos, os iteradores procuram facilitar a vida o programador que deseja percorrer objetos acessando potencialmente todos os seus elementos.&lt;/p&gt;
 
 &lt;!-- Com isso, sendo o Ruby a linguagem linda que é, essa oferece diversos tipos de iteradores que facilitam muito a vida do programador na hora de codificar um programa.  --&gt;
 
-No post sobre blocos vimos alguns deles como o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; e o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;map&lt;/code&gt;&lt;/span&gt;, por exemplo. Porém, por serem métodos é possível esses sejam usados com outros tipos de objetos:
+&lt;p&gt;No post sobre blocos vimos alguns deles como o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; e o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;map&lt;/code&gt;&lt;/span&gt;, por exemplo. Porém, por serem métodos é possível esses sejam usados com outros tipos de objetos:&lt;/p&gt;
 
 &lt;h3&gt;Times&lt;/h3&gt;
 &lt;p&gt;Método da classe &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;Integer&lt;/code&gt;&lt;/span&gt;, o times permite que façamos algo
   &lt;em&gt;N&lt;/em&gt; vezes.&lt;/p&gt;
 
-```ruby
-3.times do
-  print 'Ho! '
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Ho! '&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-  Ho! Ho! Ho!
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  Ho! Ho! Ho!
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3&gt;Upto&lt;/h3&gt;
 &lt;p&gt;Já o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;upto&lt;/code&gt;&lt;/span&gt;, como o próprio nome diz, vai até um determinado
   número, permitindo, ao contrário do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;times&lt;/code&gt;&lt;/span&gt;, que o valor atual seja utilizado dentro do bloco.&lt;/p&gt;
 
-```ruby
-0.upto(9) do |x|
-  print x, &quot; &quot;
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;upto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-0 1 2 3 4 5 6 7 8 9
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 1 2 3 4 5 6 7 8 9
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3&gt;Downto&lt;/h3&gt;
-Contrário ao &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;upto&lt;/code&gt;&lt;/span&gt;,  &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;downto&lt;/code&gt;&lt;/span&gt; faz o caminho reverso, contanto os números de cima para baixo.
+&lt;p&gt;Contrário ao &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;upto&lt;/code&gt;&lt;/span&gt;,  &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;downto&lt;/code&gt;&lt;/span&gt; faz o caminho reverso, contanto os números de cima para baixo.&lt;/p&gt;
 
-```ruby
-9.downto(0) do |x|
-  print x, &quot; &quot;
-end
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;downto&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-9 8 7 6 5 4 3 2 1 0
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;9 8 7 6 5 4 3 2 1 0
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h3&gt;Step&lt;/h3&gt;
 
-O &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;step&lt;/code&gt;&lt;/span&gt; itera até um determinado número (inclusive), pulando *N* números.
+&lt;p&gt;O &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;step&lt;/code&gt;&lt;/span&gt; itera até um determinado número (inclusive), pulando &lt;em&gt;N&lt;/em&gt; números.&lt;/p&gt;
 
-```ruby
-0.step(12, 3) { |x| print x, &quot; &quot; }
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-0 3 6 9 12
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;0 3 6 9 12
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-Cara, o Ruby é uma linguagem muito do povo, fala sério. &lt;3
+&lt;p&gt;Cara, o Ruby é uma linguagem muito do povo, fala sério. &amp;lt;3&lt;/p&gt;
 
 &lt;h3&gt;Each&lt;/h3&gt;
-Já apresentado um monte de vezes no blog, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; nos permite iterar sobre estruturas que dão suporte ao método e que dessa forma podem aproveitar das maravilhas do módulo &lt;a href=&quot;https://ruby-doc.org/core-2.4.1/Enumerable.html&quot; target=&quot;_blank&quot;&gt;Enumerable&lt;/a&gt;.
+&lt;p&gt;Já apresentado um monte de vezes no blog, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;each&lt;/code&gt;&lt;/span&gt; nos permite iterar sobre estruturas que dão suporte ao método e que dessa forma podem aproveitar das maravilhas do módulo &lt;a href=&quot;https://ruby-doc.org/core-2.4.1/Enumerable.html&quot; target=&quot;_blank&quot;&gt;Enumerable&lt;/a&gt;.&lt;/p&gt;
 
-```ruby
-[ 1, 1, 2, 3, 5 ].each { |val| print val, &quot; &quot; }
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot; &quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-1 1 2 3 5
-```
-
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1 1 2 3 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;hr /&gt;
+
 &lt;p style=&quot;text-align:center;&quot;&gt;Então, ficou faltando algo? Pode me falar nos comentários!&lt;/p&gt;
 &lt;p style=&quot;text-align:right;&quot;&gt;&lt;strong&gt;&lt;em&gt;Até o próximo post!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot; size-full wp-image-2141 aligncenter&quot; src=&quot;{{ site.baseurl }}/assets/iteradores.png&quot; alt=&quot;iteradores&quot;
-    width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="down" /><category term="for" /><category term="loop" /><category term="step" /><category term="times" /><category term="to" /><category term="up" /><summary type="html">Oi, tudo bem com você? Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?</summary></entry><entry><title type="html">Qual a diferença entre `p`, `puts` e `print`? #funTip</title><link href="http://localhost:4000/ruby/p-puts-print-inspect/" rel="alternate" type="text/html" title="Qual a diferença entre `p`, `puts` e `print`? #funTip" /><published>2017-09-16T15:16:51-03:00</published><updated>2017-09-16T15:16:51-03:00</updated><id>http://localhost:4000/ruby/p-puts-print-inspect</id><content type="html" xml:base="http://localhost:4000/ruby/p-puts-print-inspect/">&lt;p&gt;Você alguma vez já se perguntou: &lt;em&gt;Qual a diferença entre o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt;, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt; e o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/span&gt; no Ruby?&lt;/em&gt; Não se preocupe, eu vou te contar!&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot; size-full wp-image-2141 aligncenter&quot; src=&quot;/assets/iteradores.png&quot; alt=&quot;iteradores&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="down" /><category term="for" /><category term="loop" /><category term="step" /><category term="times" /><category term="to" /><category term="up" /><summary type="html">Oi, tudo bem com você? Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá?</summary></entry><entry><title type="html">Qual a diferença entre `p`, `puts` e `print`? #funTip</title><link href="http://localhost:4000/ruby/p-puts-print-inspect/" rel="alternate" type="text/html" title="Qual a diferença entre `p`, `puts` e `print`? #funTip" /><published>2017-09-16T15:16:51-03:00</published><updated>2017-09-16T15:16:51-03:00</updated><id>http://localhost:4000/ruby/p-puts-print-inspect</id><content type="html" xml:base="http://localhost:4000/ruby/p-puts-print-inspect/">&lt;p&gt;Você alguma vez já se perguntou: &lt;em&gt;Qual a diferença entre o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt;, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt; e o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/span&gt; no Ruby?&lt;/em&gt; Não se preocupe, eu vou te contar!&lt;/p&gt;
 
 &lt;p&gt;Pois bem, aqui vai a sua resposta:&lt;/p&gt;
 
-Enquanto o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt; é apresenta uma linha &quot;formatata&quot; seguida de um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/span&gt;, o &lt;span
-    style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt; mostra em sua linha o objeto da forma como ele é, enquanto o  &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/span&gt; tem o mesmo comportamento o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt;, porém sua resposta não é acompanhada de uma nova linha logo em seguida. 
-    
-Leitor(a): &lt;em&gt;Como assim? &lt;/em&gt; Cecília: &lt;em&gt;Assim:
+&lt;p&gt;Enquanto o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt; é apresenta uma linha “formatata” seguida de um &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;\n&lt;/code&gt;&lt;/span&gt;, o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt; mostra em sua linha o objeto da forma como ele é, enquanto o  &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/span&gt; tem o mesmo comportamento o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt;, porém sua resposta não é acompanhada de uma nova linha logo em seguida.&lt;/p&gt;
 
+&lt;p&gt;Leitor(a): &lt;em&gt;Como assim? &lt;/em&gt; Cecília: &lt;em&gt;Assim:&lt;/em&gt;&lt;/p&gt;
 
-```ruby
-res = [1,2,3]
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
-puts res
-p res
-print res, res
-```
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;p&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;print&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-1
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1
 2
 3
 [1,2,3]
 [1, 2, 3][1, 2, 3]
-```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-
-&lt;p&gt;O &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt;, assim como o &lt;span
-  style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/span&gt; tratam strings, caracteres mesmo. O &lt;span
-  style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt; lida com objetos, desmacarando-os.&lt;/p&gt;
+&lt;p&gt;O &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;puts&lt;/code&gt;&lt;/span&gt;, assim como o &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;print&lt;/code&gt;&lt;/span&gt; tratam strings, caracteres mesmo. O &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt; lida com objetos, desmacarando-os.&lt;/p&gt;
 
 &lt;h2&gt;* Bônus * : Inspect&lt;/h2&gt;
-Talvez você já tenha ouvido falar do comando &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;inspect&lt;/code&gt;&lt;/span&gt;. Não?! Que isso, estou aqui para te ajudar!
+&lt;p&gt;Talvez você já tenha ouvido falar do comando &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;inspect&lt;/code&gt;&lt;/span&gt;. Não?! Que isso, estou aqui para te ajudar!&lt;/p&gt;
 
-O  &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;inspect&lt;/code&gt;&lt;/span&gt; é um &lt;em&gt;alias&lt;/em&gt;, isso é, apelido do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt;, sendo ele um método que deve ser chamado a partir de objetos propriamente ditos:
+&lt;p&gt;O  &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;inspect&lt;/code&gt;&lt;/span&gt; é um &lt;em&gt;alias&lt;/em&gt;, isso é, apelido do &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt;, sendo ele um método que deve ser chamado a partir de objetos propriamente ditos:&lt;/p&gt;
 
-```ruby
-res = [1,2,3]
-puts res.inspect
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;res&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;res&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Saída:&lt;/p&gt;
 
-```
-[1,2,3]
-```
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[1,2,3]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;Mas &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;p&lt;/code&gt;&lt;/span&gt; é bem mais fácil, certo?&lt;/p&gt;
 &lt;p&gt;No final das contas, um não é melhor que outro, eles só servem para propósitos diferentes ;) !&lt;/p&gt;
 &lt;hr /&gt;
+
 &lt;p style=&quot;text-align:center;&quot;&gt;E aí? O quê achou!? Me conte nos comentários!&lt;/p&gt;
 &lt;p style=&quot;text-align:right;&quot;&gt;&lt;strong&gt;&lt;em&gt;See you later, alligator.&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-2138&quot; src=&quot;{{ site.baseurl }}/assets/pvsputs.png&quot; alt=&quot;pvsputs&quot; width=&quot;735&quot;
-  height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="inspect" /><category term="p" /><category term="print" /><category term="puts" /><category term="funTip" /><summary type="html">Você alguma vez já se perguntou: Qual a diferença entre o p, o puts e o print no Ruby? Não se preocupe, eu vou te contar!</summary></entry><entry><title type="html">Como declarar constante ou variável local e/ou global em Ruby</title><link href="http://localhost:4000/ruby/variavel-local-global-constante/" rel="alternate" type="text/html" title="Como declarar constante ou variável local e/ou global em Ruby" /><published>2017-08-10T16:54:43-03:00</published><updated>2017-08-10T16:54:43-03:00</updated><id>http://localhost:4000/ruby/variavel-local-global-constante</id><content type="html" xml:base="http://localhost:4000/ruby/variavel-local-global-constante/">&lt;p style=&quot;text-align:center;&quot;&gt;&lt;em&gt;&lt;strong&gt;Hey, como vai?!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img class=&quot;alignnone size-full wp-image-2138&quot; src=&quot;/assets/pvsputs.png&quot; alt=&quot;pvsputs&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="inspect" /><category term="p" /><category term="print" /><category term="puts" /><category term="funTip" /><summary type="html">Você alguma vez já se perguntou: Qual a diferença entre o p, o puts e o print no Ruby? Não se preocupe, eu vou te contar!</summary></entry><entry><title type="html">Como declarar constante ou variável local e/ou global em Ruby</title><link href="http://localhost:4000/ruby/variavel-local-global-constante/" rel="alternate" type="text/html" title="Como declarar constante ou variável local e/ou global em Ruby" /><published>2017-08-10T16:54:43-03:00</published><updated>2017-08-10T16:54:43-03:00</updated><id>http://localhost:4000/ruby/variavel-local-global-constante</id><content type="html" xml:base="http://localhost:4000/ruby/variavel-local-global-constante/">&lt;p style=&quot;text-align:center;&quot;&gt;&lt;em&gt;&lt;strong&gt;Hey, como vai?!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Olha, você sabia que em Ruby, os primeiros caracteres do &lt;strong&gt;nome&lt;/strong&gt; de uma variável ditam qual a
   função dela? Do quê ela trata?&lt;br /&gt;
   Eu não sabia, e decidi trazer essa informação a você (e mais algumas coisinhas)!&lt;/p&gt;
 
 &lt;h2&gt; Declarando variáveis &lt;/h2&gt;
 
-Pois bem, para variáveis &lt;em&gt;locais&lt;/em&gt;, &lt;em&gt;parâmetros&lt;/em&gt; e &lt;em&gt;nome de métodos&lt;/em&gt; usamos: letra minúscula ou
-  underscore (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt; _ &lt;/code&gt;&lt;/span&gt;), sendo o *underscore* mais indicado para &lt;a
-    href=&quot;https://github.com/ceciliassis/ruby-style-guide#trailing-underscore-variables&quot;&gt;informar uma variável que não será utilizada&lt;/a&gt;.
+&lt;p&gt;Pois bem, para variáveis &lt;em&gt;locais&lt;/em&gt;, &lt;em&gt;parâmetros&lt;/em&gt; e &lt;em&gt;nome de métodos&lt;/em&gt; usamos: letra minúscula ou
+  underscore (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt; _ &lt;/code&gt;&lt;/span&gt;), sendo o &lt;em&gt;underscore&lt;/em&gt; mais indicado para &lt;a href=&quot;https://github.com/ceciliassis/ruby-style-guide#trailing-underscore-variables&quot;&gt;informar uma variável que não será utilizada&lt;/a&gt;.&lt;/p&gt;
 
-Já as variáveis &lt;em&gt;globais&lt;/em&gt; devem começar com &lt;strong&gt;cifrão&lt;/strong&gt; (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;$&lt;/code&gt;&lt;/span&gt;), ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;$ENV&lt;/code&gt;&lt;/span&gt;.
+&lt;p&gt;Já as variáveis &lt;em&gt;globais&lt;/em&gt; devem começar com &lt;strong&gt;cifrão&lt;/strong&gt; (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;$&lt;/code&gt;&lt;/span&gt;), ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;$ENV&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
 
-Variáveis de &lt;em&gt;instância&lt;/em&gt;, isto é, aquelas declaradas dentro de classe de um objeto, começam com &lt;strong&gt;arroba&lt;/strong&gt; (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@&lt;/code&gt;&lt;/span&gt;), ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@nome&lt;/code&gt;&lt;/span&gt;.
+&lt;p&gt;Variáveis de &lt;em&gt;instância&lt;/em&gt;, isto é, aquelas declaradas dentro de classe de um objeto, começam com &lt;strong&gt;arroba&lt;/strong&gt; (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@&lt;/code&gt;&lt;/span&gt;), ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@nome&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
 
-Variáveis da &lt;em&gt;classe&lt;/em&gt; começam com dois &lt;strong&gt;arrobas&lt;/strong&gt; (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@@&lt;/code&gt;&lt;/span&gt;), ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@@config&lt;/code&gt;&lt;/span&gt;.
+&lt;p&gt;Variáveis da &lt;em&gt;classe&lt;/em&gt; começam com dois &lt;strong&gt;arrobas&lt;/strong&gt; (&lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@@&lt;/code&gt;&lt;/span&gt;), ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;@@config&lt;/code&gt;&lt;/span&gt;.&lt;/p&gt;
 
-Levando isso em conta, após caracteres &quot;especiais&quot;, você pode usar números ou o que der na telha.
+&lt;p&gt;Levando isso em conta, após caracteres “especiais”, você pode usar números ou o que der na telha.&lt;/p&gt;
 
 &lt;h2&gt; Declarando constantes &lt;/h2&gt;
-Como nem tudo são flores, o funcionamento das constantes no Ruby é um pouco diferente do que em outras linguagens. 
+&lt;p&gt;Como nem tudo são flores, o funcionamento das constantes no Ruby é um pouco diferente do que em outras linguagens.&lt;/p&gt;
 
-No Ruby, as constantes são declaradas com todas as letras maíusculas, ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;UMA_CONSTANTE&lt;/code&gt;&lt;/span&gt;, convenção também praticada em outras comunidades, porém ainda que tenham o conceito de uma constante, é permitido que seus valores sejam modificados. Veja só:
+&lt;p&gt;No Ruby, as constantes são declaradas com todas as letras maíusculas, ex: &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;UMA_CONSTANTE&lt;/code&gt;&lt;/span&gt;, convenção também praticada em outras comunidades, porém ainda que tenham o conceito de uma constante, é permitido que seus valores sejam modificados. Veja só:&lt;/p&gt;
 
-
-```ruby
-  NORTH = 'north'
-  NORTH = 'east'
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'north'&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'east'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;Você perceberá que: mesmo com um erro lançado, o valor da variável é alterado. Isso ocorre porque o Ruby trabalha com
   objetos, &lt;a href=&quot;&quot;&gt; se lembra&lt;/a&gt;, fazendo com que a cada atribuição uma nova referência seja atrelada à variável.&lt;/p&gt;
 
 &lt;p&gt;Uma alterativa seria congelar o objeto ...&lt;/p&gt;
 
-```ruby
-  NORTH = 'north'.freeze
-  # ou
-  NORTH.freeze
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'north'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;freeze&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;# ou&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;freeze&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;... no entanto, o quê o método &lt;span style=&quot;color:#ff6600;&quot;&gt;&lt;code&gt;freeze&lt;/code&gt;&lt;/span&gt; faz é congelar o objeto referênciado ...&lt;/p&gt;
 
-```ruby
-  NORTH = 'north'.freeze
-  NORTH &lt;&lt; 'oi'
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'north'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;freeze&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'oi'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;... E não a variável em si.&lt;/p&gt;
 
-```ruby
-  NORTH = 'north'.freeze
-  NORTH = 'east'
-```
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'north'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;freeze&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;NORTH&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'east'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;strong&gt;Então, cuidado!!&lt;/strong&gt;
+&lt;p&gt;&lt;strong&gt;Então, cuidado!!&lt;/strong&gt;&lt;/p&gt;
 
-Como dica, dê uma olhada na resposta &lt;strong&gt;TL;DR&lt;/strong&gt; a questão: http://stackoverflow.com/questions/26537564/ruby-constants-seem-to-be-invisibly-alterable
+&lt;p&gt;Como dica, dê uma olhada na resposta &lt;strong&gt;TL;DR&lt;/strong&gt; a questão: http://stackoverflow.com/questions/26537564/ruby-constants-seem-to-be-invisibly-alterable&lt;/p&gt;
 
 &lt;hr /&gt;
+
 &lt;p style=&quot;text-align:center;&quot;&gt;&lt;strong&gt;Dicas - #funTip&lt;/strong&gt;&lt;/p&gt;
 
-Por convenção:
-- Nomes de classes começam com letra maíscula e seguem o padrão &lt;em&gt;CamelCase&lt;/em&gt;, &lt;a href=&quot;https://github.com/ceciliassis/ruby-style-guide#camelcase-classes&quot;&gt;veja&lt;/a&gt;.
-- Nomes de métodos, variáveis, diretórios e arquivos devem seguir o padrão &lt;em&gt;snake_case&lt;/em&gt;, &lt;a href=&quot;https://github.com/ceciliassis/ruby-style-guide#snake-case-files&quot;&gt;veja&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Por convenção:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Nomes de classes começam com letra maíscula e seguem o padrão &lt;em&gt;CamelCase&lt;/em&gt;, &lt;a href=&quot;https://github.com/ceciliassis/ruby-style-guide#camelcase-classes&quot;&gt;veja&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Nomes de métodos, variáveis, diretórios e arquivos devem seguir o padrão &lt;em&gt;snake_case&lt;/em&gt;, &lt;a href=&quot;https://github.com/ceciliassis/ruby-style-guide#snake-case-files&quot;&gt;veja&lt;/a&gt;.&amp;lt;/p&amp;gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-Para mais dicas sobre boas práticas de programação no Ruby, acesse &lt;a href=&quot;https://github.com/rubocop-hq/ruby-style-guide&quot;&gt;The Ruby Style Guide&lt;/a&gt;
+&lt;p&gt;Para mais dicas sobre boas práticas de programação no Ruby, acesse &lt;a href=&quot;https://github.com/rubocop-hq/ruby-style-guide&quot;&gt;The Ruby Style Guide&lt;/a&gt;&lt;/p&gt;
 &lt;hr /&gt;
+
 &lt;p&gt;Bem, creio que com isso terminamos o post de hoje! Como podemos perceber o Ruby tem falhas, como qualquer outra linguagem,
   mas não deixe isso te abalar; Ruby continua sendo uma linguagem maravilhosa!&lt;/p&gt;
 
 &lt;p&gt;Alguma dúvida ou sugestão? Deixe nos comentários!&lt;/p&gt;
 &lt;p style=&quot;text-align:right;&quot;&gt;&lt;em&gt;&lt;strong&gt;Até mais!!&lt;/strong&gt;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img class=&quot; size-full wp-image-2004 aligncenter&quot; src=&quot;{{ site.baseurl }}/assets/variaveis_e_seus_muitos_nomes.png&quot;
-    alt=&quot;variaveis_e_seus_muitos_nomes&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="constante" /><category term="global" /><category term="local" /><category term="variaveis" /><category term="variável" /><summary type="html">Hey, como vai?! Olha, você sabia que em Ruby, os primeiros caracteres do nome de uma variável ditam qual a função dela? Do quê ela trata? Eu não sabia, e decidi trazer essa informação a você (e mais algumas coisinhas)!</summary></entry></feed>
+&lt;p&gt;&lt;img class=&quot; size-full wp-image-2004 aligncenter&quot; src=&quot;/assets/variaveis_e_seus_muitos_nomes.png&quot; alt=&quot;variaveis_e_seus_muitos_nomes&quot; width=&quot;735&quot; height=&quot;550&quot; /&gt;&lt;/p&gt;</content><author><name>Cecília Assis</name></author><category term="constante" /><category term="global" /><category term="local" /><category term="variaveis" /><category term="variável" /><summary type="html">Hey, como vai?! Olha, você sabia que em Ruby, os primeiros caracteres do nome de uma variável ditam qual a função dela? Do quê ela trata? Eu não sabia, e decidi trazer essa informação a você (e mais algumas coisinhas)!</summary></entry></feed>

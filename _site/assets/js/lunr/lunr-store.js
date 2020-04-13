@@ -18,7 +18,7 @@ var store = [{
         "teaser": null
       },{
         "title": "Classes em Ruby 101: como acessar atributos com `get` e `set`",
-        "excerpt":"Hey, como vai?! Hoje vamos falar um pouco dos famosos getters e setters e como fazemos eles do zero usando puro Ruby, shall we? Para fazermos o que precisamos hoje, vamos usar uma classe de animais, com um initialize básico: ```ruby class Animal def initialize puts \"Criando um novo animal\"...","categories": ["Ruby"],
+        "excerpt":"Hey, como vai?! Hoje vamos falar um pouco dos famosos getters e setters e como fazemos eles do zero usando puro Ruby, shall we? Para fazermos o que precisamos hoje, vamos usar uma classe de animais, com um initialize básico: class Animal def initialize puts \"Criando um novo animal\" end...","categories": ["Ruby"],
         "tags": ["get","set","getter","setter"],
         "url": "http://localhost:4000/2017/04/26/classes-101-getters-e-setters/",
         "teaser": null
@@ -36,13 +36,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Qual a diferença entre `p`, `puts` e `print`? #funTip",
-        "excerpt":"Você alguma vez já se perguntou: Qual a diferença entre o p, o puts e o print no Ruby? Não se preocupe, eu vou te contar! Pois bem, aqui vai a sua resposta: Enquanto o puts é apresenta uma linha \"formatata\" seguida de um \\n, o p mostra em sua...","categories": ["ruby"],
+        "excerpt":"Você alguma vez já se perguntou: Qual a diferença entre o p, o puts e o print no Ruby? Não se preocupe, eu vou te contar! Pois bem, aqui vai a sua resposta: Enquanto o puts é apresenta uma linha “formatata” seguida de um \\n, o p mostra em sua...","categories": ["ruby"],
         "tags": ["inspect","p","print","puts","funTip"],
         "url": "http://localhost:4000/ruby/p-puts-print-inspect/",
         "teaser": null
       },{
         "title": "Tudo o que você precisa saber sobre loops e iteradores em Ruby!",
-        "excerpt":"Oi, tudo bem com você? Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá? {: .notice} Read the ENGLISH VERSION. Diferença entre Loops e Iteradores Antes de mais nada, é importante que você entenda a diferença entre Loops e Iteradores. Ainda que os dois pareçam...","categories": ["ruby"],
+        "excerpt":"Oi, tudo bem com você? Hoje falarei sobre como podemos percorer objetos e escrever loops em Ruby, vamos lá? Read the ENGLISH VERSION. Diferença entre Loops e Iteradores Antes de mais nada, é importante que você entenda a diferença entre Loops e Iteradores. Ainda que os dois pareçam coisas iguais,...","categories": ["ruby"],
         "tags": ["down","for","loop","step","times","to","up"],
         "url": "http://localhost:4000/ruby/loops-iteradores/",
         "teaser": null
@@ -54,13 +54,13 @@ var store = [{
         "teaser": null
       },{
         "title": "Qual a diferença entre `each.with_index` e `each_with_index` ? #funTip",
-        "excerpt":"Já se perguntou qual a diferença entre `each.with_index` e `each_with_index`, esse post vem para te ajudar a responder essa pergunta! O Ruby apresenta duas formas de iterarmos sobre objetos quando queremos acesso aos seus índices: o each_with_index o each.with_index Mas qual a diferença entre os dois? Pois bem, a grande...","categories": ["ruby"],
+        "excerpt":"Já se perguntou qual a diferença entre each.with_index e each_with_index, esse post vem para te ajudar a responder essa pergunta! O Ruby apresenta duas formas de iterarmos sobre objetos quando queremos acesso aos seus índices: o each_with_index o each.with_index Mas qual a diferença entre os dois? Pois bem, a grande...","categories": ["ruby"],
         "tags": ["each","index","with","funtip"],
         "url": "http://localhost:4000/ruby/each-with-index/",
         "teaser": null
       },{
         "title": "Como criar vetores usando \"range\" em Ruby #funTip",
-        "excerpt":"Quantas vezes programando você se deparou com a necessidade de criar um array populado com vários números? Bem, isso sempre acontece comigo! E o Ruby, muito legal que é, soluciona isso rapidamente com os Ranges: ```ruby arr = Array(1..5) p arr ``` Saída: ``` [1, 2, 3, 4, 5] ```...","categories": ["ruby"],
+        "excerpt":"Quantas vezes programando você se deparou com a necessidade de criar um array populado com vários números? Bem, isso sempre acontece comigo! E o Ruby, muito legal que é, soluciona isso rapidamente com os Ranges: arr = Array(1..5) p arr Saída: [1, 2, 3, 4, 5] Viu como é que...","categories": ["ruby"],
         "tags": ["array","funTip","new","ranges"],
         "url": "http://localhost:4000/ruby/popular-vetor-range/",
         "teaser": null
