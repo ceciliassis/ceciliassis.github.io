@@ -99,7 +99,7 @@ tag_archive:
 analytics:
   provider: 'google-gtag'
   google:
-    tracking_id: 'G-1P0HRYT5ZL'
+    tracking_id: 'UA-163383677-1'
     anonymize_ip: false # default
 
 # google:
